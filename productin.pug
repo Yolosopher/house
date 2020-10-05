@@ -1,0 +1,82 @@
+extends layout.pug
+
+block content
+
+    .productin
+        h1 პროდუქტის სათაური
+        .swiper-container.product-in-slider
+            .swiper-wrapper
+                -for(i=0;i<5;i++)
+                    .swiper-slide 
+                        img(src="img/wa/1.png", alt="")
+                    .swiper-slide 
+                        img(src="img/wa/2.png", alt="")
+
+        
+        .product-info
+            .pro-info-header
+                h1 პროდუქტის სათაური
+                span #1232421
+
+
+            .price-spiner-cart
+                .pricc
+                    p 0.5 ₾
+                    span 0.75 ₾
+                
+                .spiner-xel
+                    .spinner
+                        button.minus(type='button')
+                            p.minusP
+                        input(type='text', readonly name='', value='0')
+                        button.plus(type='button')
+                            span
+                            span
+                    p ხელმისაწვდომია
+                
+                a(href="").carttt
+                    include img/cart.svg
+                    |კალათაში დამატება
+            
+            .color-change-box
+                    button(url="img/wa/1.png" style="background-color:#AD8450").active
+                    button(url="https://www.denelli.co.uk/media/catalog/product/cache/1/image/1029x825/9df78eab33525d08d6e5fb8d27136e95/m/d/md1e.jpg" style="background-color:#111111")
+                    button(url="https://lh3.googleusercontent.com/proxy/H3LESnaJM9-ERjXsW_NUvF-6_5ZeqEeWEIXVCcUZu2rIXseI5P-D1Eb1MhVol750g81t9Pw0LfOOdRTaOt3I1gmlY9DwLMk6gV4eKTh6lNmC4ydj_Ilofs-rimRYfcsO2ogEylLz4PAlUpeVGPo6F5MhtjoA2vU" style="background-color:#414141")
+
+            p საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა. მისი ტექსტი არამარტო 5 საუკუნის მანძილზე შემორჩა, არამედ მან დღემდე, ელექტრონული ტიპოგრაფიის დრომდეც უცვლელად მოაღწია. განსაკუთრებული პოპულარობა მას 1960-იან წლებში გამოსულმა Letraset-ის ცნობილმა ტრაფარეტებმა მოუტანა, უფრო მოგვიანებით კი — Aldus PageMaker-ის ტიპის საგამომცემლო პროგრამებმა, რომლებშიც Lorem Ipsum-ის სხვადასხვა ვერსიები იყო ჩაშენებული.
+
+
+
+    .prod-pop  
+        .bckk
+        img(src="img/xxxx.svg", alt="").xxxx
+
+        .pop-slide-box
+            .pro-n
+                i.fas.fa-chevron-up
+
+
+            .swiper-container.g-thumb
+                .swiper-wrapper
+                    -for(i=0;i<5;i++)
+                        .swiper-slide 
+                            img(src="img/wa/1.png", alt="")
+                        .swiper-slide 
+                            img(src="img/wa/2.png", alt="")
+            .pro-p
+                i.fas.fa-chevron-down
+            
+            .swiper-container.g-topp
+                .swiper-wrapper
+                    -for(i=0;i<5;i++)
+                        .swiper-slide 
+                            img(src="img/wa/1.png", alt="")
+                        .swiper-slide 
+                            img(src="img/wa/2.png", alt="")
+
+
+block prodin
+    script(src="js/slider.js")
+
+
+    

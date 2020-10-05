@@ -1,0 +1,167 @@
+extends layout.pug
+
+block content
+
+    .container-box
+        .empty
+            img(src="img/error.svg", alt="")
+            p კალატა ცარიელია
+            a(href="") მთავარ გვერდზე გადასვლა
+
+        .pay-done
+            img(src="img/done.svg", alt="")
+            p გადახდა წარმატებით განხორციელდა
+            a(href="") მთავარ გვერდზე გადასვლა
+
+        .cart-box
+        
+            .cart-header
+                .icon-div.active.open1
+                    figure
+                        include img/cart.svg
+                    p კალათა
+                
+                .line-div.ld1.op1
+                    span.o1
+                    span.o2
+
+                .icon-div.open2
+                    figure
+                        include img/block2.svg
+                    p მიწოდება
+
+                .line-div.ld2
+                    span.o2
+                    span.o3
+
+                .icon-div.open3
+                    figure
+                        include img/block3.svg
+                    p გადახდა
+
+
+
+            .cart1.cart-tab
+                .cart-item-list
+                    -for(i=0;i<3;i++)
+                        .cart-item
+                            i #1232421
+                            img(src="img/wa/1.png", alt="")
+                            p სეიფი FOSKA 200*310*200
+                            
+                            .price
+                                span 305.50 ₾
+                                p 230.45 ₾
+                            
+                            .spinner
+                                button.minus(type='button')
+                                    p.minusP
+                                input(type='text', readonly name='', value='0')
+                                button.plus(type='button')
+                                    span
+                                    span
+                            a(href="#!").bin
+                                img(src="img/bin.svg", alt="")
+                    
+                    .clear-jami
+                        a(href="#!").clear კალათის გასუფთავება
+                        p.jami ჯამი: 
+                            span 269.29 ₾
+                .next-back
+                    .next.open2
+                        p გაგრძელება
+
+
+
+            form(action="").cart-formm
+                .cart2.cart-tab.hiden
+                    .cart-form.input-shablon
+                        select#cart-select
+                            option(data-display='ფიზიკური პირი') უბანი
+                            option(value='1') ავლაბარი
+                            option(value='2') ვანქი
+                            option(value='3') ნავთლუღი
+                            option(value='4') დიდი დიღომი
+                            option(value='5') გლდანის მასივი
+                            option(value='6') დიდუბე
+
+                        .input-div
+                            span ტელეფონის ნომერი
+                            input(type="text" placeholder="ზუსტი მისამართი")
+
+                        .input-div
+                            span ტელეფონის ნომერი
+                            input(type="number" placeholder="ტელეფონის ნომერი")
+
+                        .mitana
+                            span მიტანის ღირებულება
+                            p 15.00 ₾
+
+                    
+                    .next-back
+                        .back.open1 უკან დაბრუნება
+                        .next.open3 
+                            p გაგრძელება
+
+
+                .cart3.cart-tab.hiden
+                    .cart-form.input-shablon
+                        input#input1.hidden(type='radio', name='inputs' checked)
+                        label.entry(for='input1')
+                            .entry-label ონლაინ გადახდა
+                            .circle
+                        input#input2.hidden(type='radio', name='inputs')
+                        label.entry(for='input2')
+                            .entry-label საბანკო გადარიცხვა
+                            .circle
+
+                        input#input3.hidden(type='checkbox', name='ss')
+                        label.entry2(for='input3')
+                            .circle
+                            .entry-label გავეცანი და ვეთანხმები " 
+                                span წესებს და პირობებს 
+                                |"
+                        
+
+
+                    
+                    .next-back
+                        .back.open2 უკან დაბრუნება
+                        button(type="submit").next
+                            p გაგრძელება
+
+
+block reg
+    script(src='js/jquery.nice-select.min.js')
+
+    script.
+        $(document).ready(function() {
+            $('select').niceSelect();
+        });
+
+
+        $('.open2').on('click', function(){
+            $('.cart-tab').addClass('hiden')
+            $('.cart2').removeClass('hiden')
+            $('.line-div').removeClass('op1 op3')
+            $('.ld1, .ld2').addClass('op2')
+            $('.icon-div').removeClass('active')
+            $('.open2').addClass('active')
+        })
+        $('.open1').on('click', function(){
+            $('.cart-tab').addClass('hiden')
+            $('.cart1').removeClass('hiden')
+            $('.line-div').removeClass('op2 op3')
+            $('.ld1').addClass('op1')
+            $('.icon-div').removeClass('active')
+            $('.open1').addClass('active')
+
+        })
+        $('.open3').on('click', function(){
+            $('.cart-tab').addClass('hiden')
+            $('.cart3').removeClass('hiden')
+            $('.line-div').removeClass('op1 op2')
+            $('.ld2').addClass('op3')
+            $('.icon-div').removeClass('active')
+            $('.open3').addClass('active')
+        })

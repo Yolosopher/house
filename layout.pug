@@ -1,0 +1,234 @@
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title Home
+        link(rel="stylesheet" type="text/css" href="css/style.css")
+        link(rel="stylesheet" type="text/css" href="css/responsive.css")
+        link(rel="stylesheet" type="text/css" href="css/swiper.min.css")
+        link(rel="stylesheet" type="text/css" href="css/nice-select.css")
+        link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css', rel='stylesheet', type='text/css')
+    
+    body
+        header.header
+            .header-up
+                nav.menu-nav
+                    ul.menu-ul
+                        li
+                            a(href="index.html").active მთავარი
+                        li
+                            a(href="about.html") ჩვენ შესახებ
+                        li
+                            a(href="blogg.html") ბლოგი
+                        li
+                            a(href="video.html") ვიდეო გალერეა
+                        li
+                            a(href="photo.html") ფოტო გალერეა
+                        li
+                            a(href="contact.html") კონტაქტი
+
+                    
+                ul.header-category.men-cat
+                    li.cat-down.downn 
+                        p წერა
+                            i.fas.fa-sort-down
+                        ul.inner-cat
+                            -for(i=0;i<2;i++)
+                                li
+                                    a(href="") კალამი
+                                li
+                                    a(href="") დაფის მარკერი
+                                li
+                                    a(href="") ბურთულიანი კალამი
+                    li.cat-down.downn 
+                        p ხატვა
+                            i.fas.fa-sort-down
+                        ul.inner-cat
+                            -for(i=0;i<9;i++)
+                                li
+                                    a(href="") კალამი
+                                li
+                                    a(href="") დაფის მარკერი
+                                li
+                                    a(href="") კორექტორი კალამი / ფუნჯი
+                    li.cat-down.downn 
+                        p ქაღალდი
+                            i.fas.fa-sort-down
+                    li.cat-down.downn 
+                        p საკანცელარიო
+                            i.fas.fa-sort-down
+                    li.cat-down.downn 
+                        p ოფისი
+                            i.fas.fa-sort-down
+                    li.cat-down.downn 
+                        p სკოლა
+                            i.fas.fa-sort-down
+
+                    
+
+
+                .addres-lang
+                    .header-addres
+                        a(href="mailto:example@site.com") 
+                            include img/email.svg
+                            |example@site.com
+                        
+                        a(href="tel:(+995) 555 444 222")
+                            include img/phone.svg
+                            |(+995) 555 444 222
+
+                    ul.lang
+                        i.fas.fa-sort-down
+                        li
+                            a(href="") 
+                                |GEO
+
+                        li.active
+                            a(href="") 
+                                |ENG
+                        
+            .header-down
+                .burger
+                    span
+                    span
+                    span
+                .logo-cat
+                    a(href="index.html").logo
+                        img(src="img/logo.svg", alt="")
+
+                    ul.header-category
+                        li.cat-down.downn წერა
+                            i.fas.fa-sort-down
+                            ul.inner-cat
+                                -for(i=0;i<9;i++)
+                                    li
+                                        a(href="") კალამი
+                                    li
+                                        a(href="") დაფის მარკერი
+                                    li
+                                        a(href="") ბურთულიანი კალამი
+                        li.cat-down.downn ხატვა
+                            i.fas.fa-sort-down
+                            ul.inner-cat
+                                -for(i=0;i<9;i++)
+                                    li
+                                        a(href="") კალამი
+                                    li
+                                        a(href="") დაფის მარკერი
+                                    li
+                                        a(href="") კორექტორი კალამი / ფუნჯი
+                        li.cat-down.downn ქაღალდი
+                            i.fas.fa-sort-down
+                        li.cat-down.downn საკანცელარიო
+                            i.fas.fa-sort-down
+                        li.cat-down.downn ოფისი
+                            i.fas.fa-sort-down
+                        li.cat-down.downn სკოლა
+                            i.fas.fa-sort-down
+                            ul.inner-cat
+                                -for(i=0;i<9;i++)
+                                    li
+                                        a(href="") კალამი
+                                    li
+                                        a(href="") დაფის მარკერი
+                                    li
+                                        a(href="") ბურთულიანი კალამი
+
+                .cart-search
+                    .search
+                        form(action="")
+                            .srch-klik
+                            include img/x.svg
+                            button(type="submit")
+                                include img/search.svg
+                            input(type="text" placeholder="მოძებნე სასურველი ნივთი")
+                    a(href="cart.html").cart
+                        img(src="img/cart.svg", alt="")
+                
+                    a(href="profile.html").profile-link
+                        img(src="img/avatar.svg", alt="")
+                        |პირადი კაბინეტი
+
+            
+            
+
+        main
+            block content
+            
+
+        footer.footer
+            .footer-up
+                .footer-cat
+                    h2 კატეგორიები
+                    ul
+                        -for(i=0;i<7;i++)
+                            li
+                                a(href="") ბაინდერი
+                            li
+                                a(href="") ბლოკნოტი
+                            li
+                                a(href="") სამაგიდე საშუალებები
+                            li
+                                a(href="") საბეჭდი ქაღალდი 
+
+                .footer-address
+                    iframe#gmap_canvas(src='https://maps.google.com/maps?q=tbilisi&t=&z=13&ie=UTF8&iwloc=&output=embed', frameborder='0', scrolling='no', marginheight='0', marginwidth='0')
+                    .nom-email
+                        a(href="mailto:example@site.com") 
+                            img(src="img/email.svg", alt="")
+                            |example@site.com
+                        
+                        a(href="tel:(+995) 555 444 222")
+                            img(src="img/phone.svg", alt="")
+                            |(+995) 555 444 222
+                    .foo-soc
+                        a(href="")
+                            i.fab.fa-facebook-square
+                        a(href="")
+                            include img/insta.svg
+                        a(href="")
+                            i.fab.fa-twitter
+
+            .footer-down
+                ul.footer-menu
+                    li
+                        a(href="index.html").active მთავარი
+                    li
+                        a(href="about.html") ჩვენ შესახებ
+                    li
+                        a(href="blog.html") ბლოგი
+                    li
+                        a(href="video.html") ვიდეო გალერეა
+                    li
+                        a(href="photo.html") ფოტო გალერეა
+                    li
+                        a(href="blog.html") კონტაქტი
+                    li
+                        a(href="rule.html") წესები და პირობები
+                
+                .scroll-order
+                    p დამზადებულია 
+                        a(href="") Smartweb 
+                        | -ში
+
+                    .footer-scroll
+                        i.fas.fa-angle-down
+                    
+
+
+                
+
+
+
+        
+
+        script(src="js/jquery-3.2.1.min.js")
+        script(src="js/swiper.min.js")
+        script(src="js/js.js")
+        block blogin
+        block s
+        block reg
+        block prodin
+        block gallery
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4qXcpIcY9F-0osv8rC6voWz1fBtk06P4"></script>

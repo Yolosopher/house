@@ -1,0 +1,40 @@
+extends layout.pug
+
+block content
+
+    .container-box
+        img(src="img/wa/reg.png", alt="").reg-img
+
+    
+        .form-shablon.input-shablon.select-
+            .error
+                img(src="img/error.svg", alt="")
+
+                p მითიტებული ელ-ფოსტა არ არის ბაზაში  დაფიქსირებული,      
+                    span გთხოვთ ცადოთ ახლიდან.
+            .done
+                img(src="img/done.svg", alt="")
+
+                p თქვენი პაროლი წარმატებით შეიცვალა
+
+                a(href="profile.html").kab პირად კაბინეტში გადასვლა
+                a(href="index.html").indd მთავარ გვერდზე გასავლა
+            h1 პაროლის აღდგენა
+
+            form(action="")
+                .input-div
+                    span პაროლი
+                    input(type="password" placeholder="პაროლი")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span გაიმეორეთ პაროლი
+                    input(type="password" placeholder="გაიმეორეთ პაროლი")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                button(type="submit") პაროლის ცვლილება
+            

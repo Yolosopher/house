@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+
+    .photo 
+
+        h1 ფოტო-გალერეა
+        
+        .photo-list
+            -for(i=0;i<5;i++)
+                a(href="photoin.html").photo-item
+                    img(src="img/wa/2.png", alt="").photo-big
+                    div
+                        img(src="img/wa/11.png", alt="")
+                        img(src="img/wa/1.png", alt="")
+                        p +15
+                    h2 ფოტო გალერეას სათაური
+                
+                a(href="photoin.html").photo-item
+                    img(src="img/wa/1.png", alt="").photo-big
+                    div
+                        img(src="img/wa/11.png", alt="")
+                        img(src="img/wa/1.png", alt="")
+                        p +15
+                    h2 ფოტო გალერეას სათაური

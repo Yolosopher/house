@@ -1,0 +1,246 @@
+extends layout.pug
+
+block content
+
+    .swiper-container.index-slider
+        .is1
+            div
+        .is2
+        .is3
+        .swiper-wrapper
+            -for(i=0;i<5;i++)
+                .swiper-slide
+                    .is-info-img
+                        .is-h2-text
+                            h2 საუკეთესო ხარისხის დაფები
+
+                            .is-price-text
+                                .is-line
+                                    div
+                                .is-price
+                                    p 25
+                                        span .50
+
+                                    span ლარიდან
+                                .is-text
+                                    p აირჩიე შენთვის სასურველი საუკეთესო საბავშვო დაფა და ჩვენ მოგიტანთ სასურველ ადგილას.
+
+                        img(src="img/wa/dapa.png", alt="").is-img
+
+                    a(href="#!").see-product პროდუქციის ნახვა
+        
+        .swiper-pagination.swiper-pagination1
+
+
+    
+    .index-block2
+        
+        a(href="#!").block2-item1
+            figure
+                include img/block1.svg
+
+            p თანამედროვე 
+                span ვებ გვერდი
+
+        a(href="#!").block2-item2
+            figure
+                include img/block2.svg
+
+            p უფასო 
+                span ტრანსპორტირება
+
+        a(href="#!").block2-item3
+            figure
+                include img/block3.svg
+
+            p მარტივი  
+                span ონლაინ გადახდა
+
+    .index-block3
+        .product-slide-box
+            i.team-p.fas.fa-chevron-left
+            .swiper-container.product-slider
+                h2 პოპულარული პროდუქცია
+                .swiper-wrapper
+                    -for(i=0;i<3;i++)
+                        .swiper-slide.product-item
+                            .spiner-img
+                                img(src="https://st3.depositphotos.com/2389541/12679/v/950/depositphotos_126792916-stock-illustration-papper-and-colorful-pencils.jpg", alt="")
+
+                                .spiner-bck
+                                    .spinner
+                                        button.minus(type='button')
+                                            p.minusP
+                                        input(type='text', readonly name='', value='0')
+                                        button.plus(type='button')
+                                            span
+                                            span
+                                    
+                                    p ხელმისაწვდომია
+                            a(href="") ფანქრები
+
+                            .price-cart
+                                .price 
+                                    p 25.50 ₾
+                                    span 0.11 ₾
+                                
+                                a(href="#!").product-cart
+                                    include img/cart.svg
+                        .swiper-slide.product-item
+                            .spiner-img
+                                img(src="https://image.freepik.com/free-photo/work-table-office-with-laptop-computer-creative-business-work_36650-75.jpg", alt="")
+
+                                .spiner-bck
+                                    .spinner
+                                        button.minus(type='button')
+                                            p.minusP
+                                        input(type='text', readonly name='', value='0')
+                                        button.plus(type='button')
+                                            span
+                                            span
+                                    
+                                    p ხელმისაწვდომია
+                            a(href="") კონვერტი 10.5*24 (დიპლომატი...
+
+                            .price-cart
+                                .price 
+                                    p 259.50 ₾
+                                
+                                a(href="#!").product-cart
+                                    include img/cart.svg
+            .team-n.fas.fa-chevron-right
+            .swiper-pagination.swiper-pagination2
+
+
+        .convert
+            .convert-text
+                h2 კონვერტი 10.5*24 
+                span შეუკვეთე 1500 კონვერტი 1000-ის ფასად.
+
+                a(href="") შეუკვეთე
+            
+            img(src="img/wa/ss.png", alt="")
+
+
+
+        .last-add-box
+            .last-add-header
+                h2 ბოლოს დამატებული პროდუქცია
+                a(href="product.html") ყველას ნახვა
+            .last-add
+                -for(i=0;i<5;i++)
+                    .product-item
+                        .spiner-img
+                            img(src="https://image.freepik.com/free-photo/work-table-office-with-laptop-computer-creative-business-work_36650-75.jpg", alt="")
+
+                            .spiner-bck
+                                .spinner
+                                    button.minus(type='button')
+                                        p.minusP
+                                    input(type='text', readonly name='', value='0')
+                                    button.plus(type='button')
+                                        span
+                                        span
+                                
+                                p ხელმისაწვდომია
+                        a(href="") კონვერტი 10.5*24 (დიპლომატი...
+
+                        .price-cart
+                            .price 
+                                p 259.50 ₾
+                            
+                            a(href="#!").product-cart
+                                include img/cart.svg
+                    .product-item
+                        .spiner-img
+                            img(src="https://st3.depositphotos.com/2389541/12679/v/950/depositphotos_126792916-stock-illustration-papper-and-colorful-pencils.jpg", alt="")
+
+                            .spiner-bck
+                                .spinner
+                                    button.minus(type='button')
+                                        p.minusP
+                                    input(type='text', readonly name='', value='0')
+                                    button.plus(type='button')
+                                        span
+                                        span
+                                
+                                p ხელმისაწვდომია
+                        a(href="") ფანქრები
+
+                        .price-cart
+                            .price 
+                                p 25.50 ₾
+                                span 0.11 ₾
+                            
+                            a(href="#!").product-cart
+                                include img/cart.svg
+            
+            .product-slide-box.last-pro-box
+                .swiper-container.last-product-slider
+                    .swiper-wrapper
+                        -for(i=0;i<3;i++)
+                            .swiper-slide.product-item
+                                .spiner-img
+                                    img(src="https://st3.depositphotos.com/2389541/12679/v/950/depositphotos_126792916-stock-illustration-papper-and-colorful-pencils.jpg", alt="")
+
+                                    .spiner-bck
+                                        .spinner
+                                            button.minus(type='button')
+                                                p.minusP
+                                            input(type='text', readonly name='', value='0')
+                                            button.plus(type='button')
+                                                span
+                                                span
+                                        
+                                        p ხელმისაწვდომია
+                                a(href="") ფანქრები
+
+                                .price-cart
+                                    .price 
+                                        p 25.50 ₾
+                                        span 0.11 ₾
+                                    
+                                    a(href="#!").product-cart
+                                        include img/cart.svg
+                            .swiper-slide.product-item
+                                .spiner-img
+                                    img(src="https://image.freepik.com/free-photo/work-table-office-with-laptop-computer-creative-business-work_36650-75.jpg", alt="")
+
+                                    .spiner-bck
+                                        .spinner
+                                            button.minus(type='button')
+                                                p.minusP
+                                            input(type='text', readonly name='', value='0')
+                                            button.plus(type='button')
+                                                span
+                                                span
+                                        
+                                        p ხელმისაწვდომია
+                                a(href="") კონვერტი 10.5*24 (დიპლომატი...
+
+                                .price-cart
+                                    .price 
+                                        p 259.50 ₾
+                                    
+                                    a(href="#!").product-cart
+                                        include img/cart.svg
+                .swiper-pagination.swiper-pagination3
+
+
+        .last-blog-box
+            .last-add-header
+                h2 ბოლოს ბლოგიდან
+                a(href="#!") ყველას ნახვა
+
+            
+            .last-blog
+                a(href="").last-blog-item
+                    img(src="img/wa/1.png", alt="")
+                    h2 საკანცელარიო მაღაზია "საკანცელარიო სახლი" -ის ინიციატივა.
+
+                a(href="").last-blog-item
+                    img(src="img/wa/2.png", alt="")
+                    h2 განახლებული დიზაინი, მარტივი ფუნქციონალიზმი და უმარტივესი გადახდის სისტემა.
+
+                
+    

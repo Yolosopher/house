@@ -1,0 +1,149 @@
+extends layout.pug
+
+block content
+
+    .container-box
+        img(src="img/wa/reg.png", alt="").reg-img
+
+    
+        .form-shablon.input-shablon
+            h1 რეგისტრაცია
+            select#sel
+                option(data-display='ფიზიკური პირი') ფიზიკური პირი
+                option(value='1') ფიზიკური პირი
+                option(value='2') იურიდიული პირი
+               
+
+
+            form(action="").reg1.active
+                .input-div.errorr
+                    span სახელი
+                    input(type="text" placeholder="სახელი")
+
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+                        
+
+
+                .input-div
+                    span გვარი
+                    input(type="text" placeholder="გვარი")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span ელ-ფოსტა
+                    input(type="email" placeholder="ელ-ფოსტა")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span ტელეფონის ნომერი
+                    input(type="number" placeholder="ტელეფონის ნომერი"
+                    )
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span პაროლი
+                    input(type="password" placeholder="პაროლი")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span გაიმეორეთ პაროლი
+                    input(type="password" placeholder="გაიმეორეთ პაროლი")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+                        
+                button(type="submit") რეგისტრაცია
+            
+            
+            form(action="").reg2
+                .input-div
+                    span სახელი
+                    input(type="text" placeholder="სახელი")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span გვარი
+                    input(type="text" placeholder="გვარი")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span ორგანიზაცია
+                    input(type="text" placeholder="ორგანიზაცია")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+                
+                .input-div
+                    span პირადი ნომერი
+                    input(type="number" placeholder="პირადი ნომერი")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span ელ-ფოსტა
+                    input(type="email" placeholder="ელ-ფოსტა")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span ტელეფონის ნომერი
+                    input(type="number" placeholder="ტელეფონის ნომერი"
+                    )
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span პაროლი
+                    input(type="password" placeholder="პაროლი")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                .input-div
+                    span გაიმეორეთ პაროლი
+                    input(type="password" placeholder="გაიმეორეთ პაროლი")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                button(type="submit") რეგისტრაცია
+            a(href="").ukve უკვე დარეგისტრირებული ხარ? 
+                span გაიარე ავტორიზაცია
+
+
+block reg
+    script(src='js/jquery.nice-select.min.js')
+
+    script.
+        $(document).ready(function() {
+
+            $('select').niceSelect();
+            let reg2 = 2
+            $('.list li').on('click', function() {
+            if($(this).attr('data-value') == reg2){
+                $('.reg2').addClass('active')
+                $('.reg1').removeClass('active')
+            }
+            else {
+                $('.reg2').removeClass('active')
+                $('.reg1').addClass('active')
+            }
+            });
+        });

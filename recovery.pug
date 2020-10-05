@@ -1,0 +1,33 @@
+extends layout.pug
+
+block content
+
+    .container-box
+        img(src="img/wa/reg.png", alt="").reg-img
+
+    
+        .form-shablon.input-shablon.select-
+            .error
+                img(src="img/error.svg", alt="")
+
+                p მითიტებული ელ-ფოსტა არ არის ბაზაში  დაფიქსირებული,      
+                    span გთხოვთ ცადოთ ახლიდან.
+            .done
+                img(src="img/done.svg", alt="")
+
+                p სპეციალური ბმული გამოგზავნილია თქვენს მიერ  მითითებულ 
+                    span ელ-ფოსტაზე. 
+
+
+            h1 პაროლის აღდგენა
+
+            form(action="")
+                .input-div
+                    span ელ-ფოსტა
+                    input(type="email" placeholder="ელ-ფოსტა")
+                    .error-div
+                        img(src="img/err.svg", alt="").err
+                        p გთხოვთ შეიყვანოთ სახელი
+
+                button(type="submit") პაროლის აღდგენა
+            

@@ -1,0 +1,132 @@
+extends layout.pug
+
+block content
+
+    .profile
+        h1 პროფილი
+        .profile-sellect
+            select#sell
+                    option(data-display='პერსონალური ინფორმაცია') პერსონალური ინფორმაცია
+                    option(value='1') პერსონალური ინფორმაცია
+                    option(value='2') პაროლის ცვლილება
+                    option(value='3') შეკვეთების ისტორია
+        ul.profil-ul
+            li.profil-item.pro-info.active პერსონალური ინფორმაცია
+            li.profil-item.pro-rec პაროლის ცვლილება
+            li.profil-item.pro-ord შეკვეთების ისტორია
+
+
+        form.profile-info.profile-tabs.active
+            .input-div
+                span სახელი
+                img(src="img/edit.svg", alt="").editt
+                input(type="text" value="მიშო გოგიბერიძე" readonly).redinput
+                button(type="submit")
+                    img(src="img/check.svg", alt="" )
+
+            .input-div
+                span კომპანია
+                img(src="img/edit.svg", alt="").editt
+                input(type="text" value="შ.პ.ს სითიზენს" readonly).redinput
+                button(type="submit")
+                    img(src="img/check.svg", alt="" )
+
+            .input-div
+                span ელ-ფოსტა
+                img(src="img/edit.svg", alt="").editt
+                input(type="email" value="example@gmail.com" readonly).redinput
+                button(type="submit")
+                    img(src="img/check.svg", alt="" )
+            
+            .input-div
+                span პირადი ნომერი
+                img(src="img/edit.svg", alt="").editt
+                input(type="number" value="01000000221" readonly).redinput
+                button(type="submit")
+                    img(src="img/check.svg", alt="" )
+
+            .input-div
+                span ტელეფონის ნომერი
+                img(src="img/edit.svg", alt="").editt
+                input(type="number" value="555456321" readonly).redinput
+                button(type="submit")
+                    img(src="img/check.svg", alt="" )
+
+
+        form.profile-recovery.profile-tabs.input-shablon
+            .input-div
+                span ძველი პაროლი
+                input(type="password" placeholder="ძველი პაროლი")
+
+            .input-div
+                span ახალი პაროლი
+                input(type="password" placeholder="ახალი პაროლი")
+
+            .input-div
+                span დაადასტურე ახალი პაროლი
+                input(type="password" placeholder="დაადასტურე ახალი პაროლი")
+
+            button(type="submit") ცვლილება
+
+        .profile-order.profile-tabs
+            .order-item
+                .order-up
+                    span.num 1
+                    span.dat 26 იანვარი 2019
+                    span.reshotka #143421
+                    img(src="img/arrow.svg", alt="")
+                .order-down
+                    -for(i=0;i<2;i++)
+                        .order-down-item
+                            img(src="img/wa/2.png", alt="")
+                            p.sax შავი ფანქრები სხვადასხვა ზომის
+                            p.raodenoba 
+                                span რაოდენობა: 
+                                |3
+                            p.price 30.55 ₾
+
+            .order-item
+                .order-up
+                    span.num 1
+                    span.dat 26 იანვარი 2019
+                    span.reshotka #143421
+                    img(src="img/arrow.svg", alt="")
+                .order-down
+                    -for(i=0;i<3;i++)
+                        .order-down-item
+                            img(src="img/wa/2.png", alt="")
+                            p.sax შავი ფანქრები სხვადასხვა ზომის
+                            p.raodenoba 
+                                span რაოდენობა: 
+                                |32
+                            p.price 30.55 ₾
+
+
+block reg
+    script(src='js/jquery.nice-select.min.js')
+
+    script.
+        $(document).ready(function() {
+
+            $('select').niceSelect();
+            let prof1 = 1
+            let prof2 = 2
+            let prof3 = 3
+            $('.list li').on('click', function() {
+            if($(this).attr('data-value') == prof1){
+                $('.profil-item').removeClass("active");
+                $('.profile-tabs').removeClass("active");
+                $('.profile-info').addClass("active");
+            }
+            else if($(this).attr('data-value') == prof2){
+                $('.profil-item').removeClass("active");
+                $('.profile-tabs').removeClass("active");
+                $('.profile-recovery').addClass("active");
+            }
+            else {
+                $('.profil-item').removeClass("active");
+                $('.profile-tabs').removeClass("active");
+                $('.profile-order').addClass("active");
+            }
+            });
+        });

@@ -1,0 +1,75 @@
+extends layout.pug
+
+block content
+
+    .container-box
+
+        .cart-box
+        
+            .cart-header
+                .icon-div
+                    figure
+                        include img/cart.svg
+                    p კალათა
+                
+                .line-div
+                    span
+                    span.active
+
+                .icon-div.active
+                    figure
+                        include img/block2.svg
+                    p მიწოდება
+
+                .line-div
+                    span.active
+                    span
+
+                .icon-div
+                    figure
+                        include img/block3.svg
+                    p გადახდა
+
+
+            .cart2
+                form(action="").cart-form.input-shablon
+                    select#cart-select
+                        option(data-display='ფიზიკური პირი') უბანი
+                        option(value='1') ავლაბარი
+                        option(value='2') ვანქი
+                        option(value='3') ნავთლუღი
+                        option(value='4') დიდი დიღომი
+                        option(value='5') გლდანის მასივი
+                        option(value='6') დიდუბე
+
+                    .input-div
+                        span ტელეფონის ნომერი
+                        input(type="text" placeholder="ზუსტი მისამართი")
+
+                    .input-div
+                        span ტელეფონის ნომერი
+                        input(type="number" placeholder="ტელეფონის ნომერი")
+
+                    .mitana
+                        span მიტანის ღირებულება
+                        p 15.00 ₾
+
+                
+                .next-back
+                    a(href="cart.html").back უკან დაბრუნება
+                    a(href="cart3.html").next 
+                        p გაგრძელება
+
+
+
+
+block reg
+    script(src='js/jquery.nice-select.min.js')
+
+    script.
+        $(document).ready(function() {
+            $('select').niceSelect();
+        });
+
+            
+            

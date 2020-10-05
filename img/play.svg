@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="Group_225" data-name="Group 225" transform="translate(-661 -456)">
+    <rect id="Rectangle_318" data-name="Rectangle 318" width="44" height="44" transform="translate(661 456)" fill="#ad8450"/>
+    <g id="Layer_2" data-name="Layer 2" transform="translate(676 470)">
+      <g id="Layer_1" data-name="Layer 1" transform="translate(0 0)">
+        <path id="play_arrow" data-name="play arrow" d="M1.863,16a1.79,1.79,0,0,1-.94-.27A1.944,1.944,0,0,1,0,14.047V1.953A1.95,1.95,0,0,1,.923.27,1.778,1.778,0,0,1,2.777.252L13.05,6.3a2,2,0,0,1,0,3.4L2.777,15.748A1.808,1.808,0,0,1,1.863,16Z" transform="translate(0 0)" fill="#111"/>
+      </g>
+    </g>
+  </g>
+</svg>
