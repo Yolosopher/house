@@ -75,7 +75,7 @@
     img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         transform-origin: center;
         transition: transform 0s 0s;
     }
@@ -273,9 +273,15 @@ body {
 
         &.minus{
             background-image: url('../img/minus.svg');
+            &:hover{
+                background-image: url('../img/minus-hover.svg')
+            }
         }
         &.plus{
             background-image: url('../img/plus.svg');
+            &:hover{
+                background-image: url('../img/plus-hover.svg')
+            }
         }
     }
 
@@ -762,7 +768,7 @@ p,span{
             margin-bottom: 25px;
         }
 
-        svg{
+        img{
             margin-right:15px;
         }
         path{
@@ -1102,7 +1108,7 @@ p,span{
     margin-bottom: -99px;
 
 
-    a{
+    div{
        @include flex();
        background-color: #AD8450;
        width: 320px;
@@ -2711,7 +2717,7 @@ transition: 0s;
                 img{
                     height: 100%;
                     width: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
         }
     }
@@ -2810,6 +2816,7 @@ transition: 0s;
             font-family: bold;
             margin-top: 9px;
             opacity: .6;
+            text-align: center;
         }
     }
 
@@ -2885,7 +2892,7 @@ transition: 0s;
             img{
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
             }
         }
     }
@@ -2900,7 +2907,7 @@ transition: 0s;
             img{
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             }
         }
     }
@@ -3322,8 +3329,21 @@ transition: 0s;
   }
 
 
+  
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+a.non-auth-in-basket {
+    width: 175px;
+    margin: 0 auto;
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
 }
