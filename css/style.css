@@ -3908,7 +3908,7 @@ p, span {
   white-space: nowrap;
 }
 
-.entry2 .entry-label span {
+.entry2 .entry-label span, .entry2 .entry-label a {
   font-size: 13px;
   font-family: bold;
   color: #DBAB5E;
