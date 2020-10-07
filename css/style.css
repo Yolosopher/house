@@ -3981,14 +3981,24 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-a.non-auth-in-basket {
+a.non-auth-in-basket.profile-link {
   width: 175px;
   margin: 0 auto;
+  font-size: 11px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  a.non-auth-in-basket.profile-link {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  a.non-auth-in-basket {
-    width: 100%;
+  a.non-auth-in-basket.profile-link {
+    width: 90%;
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

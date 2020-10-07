@@ -3340,10 +3340,17 @@ input[type=number] {
     -moz-appearance:textfield;
 }
 
-a.non-auth-in-basket {
+a.non-auth-in-basket.profile-link {
     width: 175px;
     margin: 0 auto;
+    font-size: 11px;
+    margin-bottom: 40px;
+    @media screen and (max-width: 800px) {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
     @media screen and (max-width: 600px) {
-        width: 100%;
+        width: 90%;
+        margin-top: 20px;        
     }
 }
