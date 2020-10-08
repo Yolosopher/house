@@ -1340,9 +1340,10 @@
         </ul>
       </div>
       <div class="footer-address">
-        <iframe id="gmap_canvas"
-          src="https://maps.google.com/maps?q=tbilisi&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-          frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <!-- google map div in footer -->
+        <div id="gmap_canvas">
+          <div id="map"></div>
+        </div>
         <div class="nom-email"><a href="mailto:example@site.com">
             <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="17" height="15"
               viewBox="0 0 17 15">
@@ -1408,7 +1409,54 @@
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/js.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4qXcpIcY9F-0osv8rC6voWz1fBtk06P4"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4qXcpIcY9F-0osv8rC6voWz1fBtk06P4"></script> -->
+  <script>
+    // start init map 
+        function initMap() {
+          // The location of location
+          var location = {lat: 41.797486, lng: 44.819829};
+          // The map, centered at location
+          var map = new google.maps.Map(
+              document.getElementById('map'), {
+                zoom: 15,
+                zoomControl: true,
+                zoomControlOptions: {
+                  position: google.maps.ControlPosition.LEFT_CENTER,
+                },
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                  style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                },
+                controlSize: 26,
+                streetViewControl: true,
+                fullscreenControl: true,
+                
+                center: location
+              });
+          // The marker, positioned at location
+          var marker = new google.maps.Marker({position: location, map: map});
+          google.maps.event.addListener(
+          marker,
+          'click',
+          (function(marker, i) {
+            return function() {
+              infowindow.setContent(locations[i][0])
+              infowindow.open(map, marker)
+            }
+          })(marker, i)
+          )
+        }
+    
+    // end init map 
+    
+      </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4qXcpIcY9F-0osv8rC6voWz1fBtk06P4&amp;callback=initMap"></script>
+  <style>
+    #map {
+      height: 100%;
+    }
+  </style>
+
 </body>
 
 </html>
