@@ -255,6 +255,15 @@ $('.editt').on('click', function() {
   $(this).addClass('active')
 });
 
+// submit
+// $('.personal-data-btn').on('click', function() {
+//   $(this).prev().attr('readonly', true);
+//   $(this).prev().removeClass('active');
+//   $(this).prev().attr('style', '');
+//   $(this).prev().prev().removeClass('active');
+//   $(this).removeClass('active');
+//   return false;
+// });
 //  @@@@@@@@@@@@@@@@@@@@@
  
  
