@@ -886,7 +886,7 @@ p,span{
     width: 383px;
     height: 154px;
 }
-#map {
+#map, #map2 {
     height: 100%;
   }
 
@@ -2174,7 +2174,7 @@ p,span{
         font-weight: bold;
     }
 
-    iframe{
+    iframe, .iframe{
         width: 100%;
         height: 285px;
     }
@@ -3348,10 +3348,9 @@ a.non-auth-in-basket.profile-link {
     width: 175px;
     margin: 0 auto;
     font-size: 11px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     @media screen and (max-width: 800px) {
         font-size: 13px;
-        margin-bottom: 20px;
     }
     @media screen and (max-width: 600px) {
         width: 90%;
