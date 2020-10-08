@@ -1604,7 +1604,7 @@ p,span{
                
             }
 
-            span{
+            span, label{
                 opacity: 1;
                 display: block;
                 top: -8px;
@@ -1616,7 +1616,7 @@ p,span{
 
 
         }
-        span{
+        span, label{
             position: absolute;
             font-size: 13px;
             font-family: bold;

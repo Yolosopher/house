@@ -1940,7 +1940,7 @@ p, span {
   border-color: white;
 }
 
-.input-shablon .input-div.active span {
+.input-shablon .input-div.active span, .input-shablon .input-div.active label {
   opacity: 1;
   display: block;
   top: -8px;
@@ -1950,7 +1950,7 @@ p, span {
   transition: 0.3s;
 }
 
-.input-shablon .input-div span {
+.input-shablon .input-div span, .input-shablon .input-div label {
   position: absolute;
   font-size: 13px;
   font-family: bold;
