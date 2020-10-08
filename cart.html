@@ -337,15 +337,15 @@
           <form class="cart-formm" action="">
             <div class="cart2 cart-tab hiden">
               <div class="cart-form input-shablon">
-                <select id="cart-select">
-                  <option data-display="ფიზიკური პირი">უბანი</option>
-                  <option value="1">ავლაბარი</option>
-                  <option value="2">ვანქი</option>
-                  <option value="3">ნავთლუღი</option>
-                  <option value="4">დიდი დიღომი</option>
-                  <option value="5">გლდანის მასივი</option>
-                  <option value="6">დიდუბე</option>
-                </select>
+                <select id="cart-select" name="district_id" style="display: none;">
+                  <option value="" disabled selected>უბანი</option>
+                  <option value="4" data-delivery-price="4">
+                    ვაკე-საბურთალო
+                  </option>
+                  <option value="5" data-delivery-price="6">
+                    დიღმის მასივი
+                  </option>
+                                      </select>
                 <div class="input-div"><span>ტელეფონის ნომერი</span>
                   <input type="text" placeholder="ზუსტი მისამართი"/>
                 </div>
