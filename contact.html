@@ -294,7 +294,10 @@
           </ul>
         </div>
         <div class="footer-address">
-          <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=tbilisi&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          <!-- google map div in footer -->
+          <div id="gmap_canvas">
+            <div id="map"></div>
+          </div>
           <div class="nom-email"><a href="mailto:example@site.com"> <img src="img/email.svg" alt=""/>example@site.com</a><a href="tel:(+995) 555 444 222"><img src="img/phone.svg" alt=""/>(+995) 555 444 222</a></div>
           <div class="foo-soc"><a href=""><i class="fab fa-facebook-square"></i></a><a href=""><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
   <g id="Layer_1" data-name="Layer 1">
@@ -324,6 +327,8 @@
     </footer>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script src="js/js.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4qXcpIcY9F-0osv8rC6voWz1fBtk06P4"></script>
+    <script src="js/js.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4qXcpIcY9F-0osv8rC6voWz1fBtk06P4&amp;callback=initMap"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4qXcpIcY9F-0osv8rC6voWz1fBtk06P4&amp;callback=initMapSecond"></script>
   </body>
 </html>
