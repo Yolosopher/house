@@ -333,3 +333,42 @@ $(".product-in-slider img")
 
     coverImage.parent().removeClass("active");
 });
+
+
+    // start init map 
+    function initMap() {
+      // The location of location
+      var location = {lat: 41.797486, lng: 44.819829};
+      // The map, centered at location
+      var map = new google.maps.Map(
+          document.getElementById('map'), {
+            zoom: 15,
+            zoomControl: true,
+            zoomControlOptions: {
+              position: google.maps.ControlPosition.LEFT_CENTER,
+            },
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+              style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            controlSize: 26,
+            streetViewControl: true,
+            fullscreenControl: true,
+            
+            center: location
+          });
+      // The marker, positioned at location
+      var marker = new google.maps.Marker({position: location, map: map});
+      google.maps.event.addListener(
+      marker,
+      'click',
+      (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0])
+          infowindow.open(map, marker)
+        }
+      })(marker, i)
+      )
+    }
+
+// end init map 
