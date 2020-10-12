@@ -1479,6 +1479,14 @@ p,span{
     object-fit: cover;
     top: 130px;
 }
+#cart-select.errorr + .nice-select {
+    border-color: #bf2113 !important;
+}
+// #exact-address, #tel-number {
+//     &.reddd {
+//         border-color: #bf2113 !important;
+//     }
+// }
 
 .nice-select{
     width: 100%!important;

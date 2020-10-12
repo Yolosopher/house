@@ -345,12 +345,12 @@
                   <option value="5" data-delivery-price="6">
                     დიღმის მასივი
                   </option>
-                                      </select>
-                <div class="input-div"><span>ტელეფონის ნომერი</span>
-                  <input type="text" placeholder="ზუსტი მისამართი"/>
+                </select>
+                <div class="input-div"><span>ზუსტი მისამართი</span>
+                  <input id="exact-address" type="text" placeholder="ზუსტი მისამართი"/>
                 </div>
                 <div class="input-div"><span>ტელეფონის ნომერი</span>
-                  <input type="number" placeholder="ტელეფონის ნომერი"/>
+                  <input id="tel-number" type="number" placeholder="ტელეფონის ნომერი"/>
                 </div>
                 <div class="mitana"><span>მიტანის ღირებულება</span>
                   <p>15.00 ₾</p>
@@ -383,7 +383,7 @@
               </div>
               <div class="next-back">
                 <div class="back open2">უკან დაბრუნება</div>
-                <button class="next" type="submit">
+                <button id="final-submit" class="next" type="submit">
                   <p>გაგრძელება</p>
                 </button>
               </div>
@@ -464,7 +464,9 @@
       $(document).ready(function() {
           $('select').niceSelect();
       });
-      
+      $('#cart-select').change(function() {
+        $(this).removeClass('errorr')
+      });
       
       $('.open2').on('click', function(){
           $('.cart-tab').addClass('hiden')
@@ -484,13 +486,42 @@
       
       })
       $('.open3').on('click', function(){
-          $('.cart-tab').addClass('hiden')
-          $('.cart3').removeClass('hiden')
-          $('.line-div').removeClass('op1 op2')
-          $('.ld2').addClass('op3')
-          $('.icon-div').removeClass('active')
-          $('.open3').addClass('active')
-      })
+          let selectDistrict = document.getElementById('cart-select');
+
+          if (selectDistrict.value.length == 0) {
+            selectDistrict.classList.add('errorr')
+          } else {
+            selectDistrict.classList.remove('errorr');
+          }
+          
+          $('#exact-address,#tel-number').each(function(){
+            if ($(this).val().length <= 0) {
+              $(this).parent().addClass('errorr');
+              console.log(`${$(this)} failed!`);
+            } else {
+              $(this).parent().removeClass('errorr')
+            }
+          })
+
+          if ($('.errorr')[0]) {
+            return;
+          } else {
+            $('.cart-tab').addClass('hiden');
+            $('.cart3').removeClass('hiden');
+            $('.line-div').removeClass('op1 op2');
+            $('.ld2').addClass('op3');
+            $('.icon-div').removeClass('active');
+            $('.open3').addClass('active');
+          }
+
+      });
+
+      $('#final-submit').on('click', function() {
+        if (!document.getElementById('input3').checked) {
+          return false;
+        }
+      });
+
     </script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4qXcpIcY9F-0osv8rC6voWz1fBtk06P4"></script>
   </body>
 </html>
