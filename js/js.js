@@ -164,7 +164,10 @@ $('.order-up').on('click', function() {
   // $('.profile-tabs').removeClass("active");
 });
 
-$('.filter-ul li').on('click', function() {
+$('.filter-ul li').on('click', function() {  
+  $('.filter-ul li .drop-filter:visible').slideToggle("fast");
+  $('.filter-ul li .drop-filter:visible').css('display', 'flex');
+  $('.filter-ul li .drop-filter:visible').toggleClass('active')
   $(this).children('.drop-filter').slideToggle("fast");
   $(this).children('.drop-filter').css('display', 'flex');
   $(this).children('.drop-filter').toggleClass('active')
