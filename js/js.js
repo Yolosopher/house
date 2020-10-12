@@ -457,7 +457,6 @@ if ($('.cart-header')) {
     $("#exact-address,#tel-number").each(function () {
       if ($(this).val().length <= 0) {
         $(this).parent().addClass("errorr");
-        console.log(`${$(this)} failed!`);
       } else {
         $(this).parent().removeClass("errorr");
       }
