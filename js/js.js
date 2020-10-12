@@ -316,8 +316,8 @@ $(".product-in-slider img")
 
 // start init map
 function initMap() {
-	// The location of location
-	var location = { lat: 41.7203914, lng: 44.7993872 };
+  // The location of location
+  var location = { lat: lattt, lng: longgg };
 	// options
 	var opts = {
 		zoom: 16,
