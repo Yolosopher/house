@@ -336,12 +336,14 @@ function initMap() {
 		center: location,
 	};
 	// The map, centered at location
-	var map = new google.maps.Map(document.getElementById("map"), opts);
-	var map2 = new google.maps.Map(document.getElementById("map2"), opts);
-
+  var map = new google.maps.Map(document.getElementById("map"), opts);
+  if (document.getElementById("map2")) {
+    var map2 = new google.maps.Map(document.getElementById("map2"), opts);
+    var marker2 = new google.maps.Marker({ position: location, map: map2 });
+  }
 	// The marker, positioned at location
 	var marker = new google.maps.Marker({ position: location, map: map });
-	var marker2 = new google.maps.Marker({ position: location, map: map2 });
+
 }
 // end init map
 
