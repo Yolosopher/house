@@ -421,7 +421,7 @@ $(".product-in-slider img")
 
 // card validation
 
-if ($('.cart-header')) {
+if ($('.cart-header')[0]) {
   $(document).ready(function () {
     $("select").niceSelect();
   });
