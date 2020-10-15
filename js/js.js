@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	if (document.querySelector('.productin')) {
+		createBackBTN();
+	};
 	var swiperindex = new Swiper(".index-slider", {
 		direction: "vertical",
 		slidesPerView: 1,
@@ -103,7 +106,6 @@ $(document).ready(function () {
 		}
 		$(this).parent().find("input").val(count);
 	});
-
 	$(document).on("click", ".minus", function () {
 		var count = $(this).parent().find("input").val();
 		if (count <= 0) {
@@ -408,3 +410,21 @@ if ($(".cart-header")[0]) {
 		}
 	});
 }
+
+function goToPrev() {
+	let prevURL = window.history;	
+	prevURL.back();
+};
+
+function createBackBTN() {
+	let goToPrevPage = document.createElement('a');
+	goToPrevPage.classList.add('goToPrevPage');
+	document.querySelector('.productin').appendChild(goToPrevPage);
+	goToPrevPage.setAttribute("href", 'javascript:goToPrev()');
+	let svg = document.createElement('svg');
+	goToPrevPage.appendChild(svg);
+	svg.outerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="5.401" height="3" viewBox="0 0 5.401 3">
+	<path id="arrow_drop_up" data-name="arrow drop up" d="M2.7,3a.3.3,0,0,1-.212-.088L.084.512A.3.3,0,0,1,.3,0H5.1a.3.3,0,0,1,.212.512l-2.4,2.4A.3.3,0,0,1,2.7,3Z" transform="translate(0.005 0)" fill="#111"/>
+  </svg>
+  `;
+};

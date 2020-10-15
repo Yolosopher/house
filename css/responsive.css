@@ -615,15 +615,26 @@
   }
   .pro-info-header h1 {
     display: none;
+    margin-bottom: 0;
   }
   .pro-info-header {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-bottom: 40px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .product-info {
     margin-left: 0;
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
   }
   .pricc {
     margin-top: -55px;

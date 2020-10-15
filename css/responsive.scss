@@ -687,15 +687,20 @@
 
     .pro-info-header h1{
         display: none;
+        margin-bottom: 0;
     }
 
     .pro-info-header{
         justify-content: flex-end;
         // padding-right: 14px;
         margin-bottom: 40px;
+        flex-direction: row;
+        align-items: center;
+
     }
     .product-info{
         margin-left: 0;
+        flex: unset
     }
     
     .pricc {

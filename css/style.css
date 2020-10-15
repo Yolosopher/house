@@ -3273,6 +3273,9 @@ p, span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3297,11 +3300,12 @@ p, span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-top: 70px;
   margin-bottom: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .pro-info-header h1 {
@@ -3309,6 +3313,7 @@ p, span {
   color: #111111;
   font-family: cap;
   font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .pro-info-header span {
@@ -4009,5 +4014,31 @@ a.non-auth-in-basket.profile-link {
     width: 90%;
     margin-top: 20px;
   }
+}
+
+.goToPrevPage {
+  position: absolute;
+  top: 70px;
+  left: 52px;
+  width: 44px;
+  height: 44px;
+  background-color: #AD8450;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.goToPrevPage svg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 /*# sourceMappingURL=style.css.map */

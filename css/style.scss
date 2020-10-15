@@ -2736,6 +2736,7 @@ transition: 0s;
 
     .product-info{
         display: flex;
+        flex: 1;
         flex-direction: column;
         justify-content: flex-start;
         margin-left: 28px;
@@ -2751,15 +2752,16 @@ transition: 0s;
     .pro-info-header{
         display: flex;
         justify-content: space-between;
-        align-items: center;
         margin-top: 70px;
         margin-bottom: 50px;
+        flex-direction: column;
 
         h1{
             font-size: 24px;
             color: #111111;
             font-family: cap;
             font-weight: bold;
+            margin-bottom: 8px;
         }
         span{
             font-size: 13px;
@@ -3363,5 +3365,22 @@ a.non-auth-in-basket.profile-link {
     @media screen and (max-width: 600px) {
         width: 90%;
         margin-top: 20px;        
+    }
+}
+
+.goToPrevPage {
+    position: absolute;
+    top: 70px;
+    left: 52px;
+    width: 44px;
+    height: 44px;
+    background-color: #AD8450;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    svg {
+        transform: rotate(90deg);
     }
 }
