@@ -347,7 +347,9 @@
 
 
 @media only screen and (max-width: 1024px) {
-
+    .goToPrevPage {
+        display: none;
+    }
     .blogin{
         padding: 40px 0;
     }
