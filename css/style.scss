@@ -1834,7 +1834,7 @@ p,span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
+    pointer-events: none;
 
     &.active{
         p{
