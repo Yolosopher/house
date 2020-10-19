@@ -1457,6 +1457,9 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .profile-info .input-div {
+    width: 100%;
+  }
   .profile-recovery button,
   .profile-recovery .input-div {
     width: 100%;

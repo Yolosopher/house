@@ -278,20 +278,24 @@ body.shmactive {
   background-repeat: no-repeat;
 }
 
-.spinner button.minus {
-  background-image: url("../img/minus.svg");
+.spinner button.minus::after {
+  content: url("../img/minus.svg");
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
-.spinner button.minus:hover, .spinner button.minus:active, .spinner button.minus:focus {
-  background-image: url("../img/minus-hover.svg");
+.spinner button.minus:hover::after, .spinner button.minus:active::after, .spinner button.minus:focus::after {
+  content: url("../img/minus-hover.svg");
 }
 
-.spinner button.plus {
-  background-image: url("../img/plus.svg");
+.spinner button.plus::after {
+  content: url("../img/plus.svg");
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
-.spinner button.plus:hover, .spinner button.plus:active, .spinner button.plus:focus {
-  background-image: url("../img/plus-hover.svg");
+.spinner button.plus:hover::after, .spinner button.plus:active::after, .spinner button.plus:focus::after {
+  content: url("../img/plus-hover.svg");
 }
 
 h1, h2 {

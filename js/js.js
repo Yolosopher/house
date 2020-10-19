@@ -415,7 +415,6 @@ function goToPrev() {
 	let prevURL = window.history;	
 	prevURL.back();
 };
-
 function createBackBTN() {
 	let goToPrevPage = document.createElement('a');
 	goToPrevPage.classList.add('goToPrevPage');
