@@ -282,7 +282,7 @@ body.shmactive {
   background-image: url("../img/minus.svg");
 }
 
-.spinner button.minus:hover {
+.spinner button.minus:hover, .spinner button.minus:active, .spinner button.minus:focus {
   background-image: url("../img/minus-hover.svg");
 }
 
@@ -290,7 +290,7 @@ body.shmactive {
   background-image: url("../img/plus.svg");
 }
 
-.spinner button.plus:hover {
+.spinner button.plus:hover, .spinner button.plus:active, .spinner button.plus:focus {
   background-image: url("../img/plus-hover.svg");
 }
 

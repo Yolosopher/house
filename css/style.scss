@@ -273,13 +273,13 @@ body {
 
         &.minus{
             background-image: url('../img/minus.svg');
-            &:hover{
+            &:hover, &:active, &:focus {
                 background-image: url('../img/minus-hover.svg')
             }
         }
         &.plus{
             background-image: url('../img/plus.svg');
-            &:hover{
+            &:hover, &:active, &:focus {
                 background-image: url('../img/plus-hover.svg')
             }
         }
