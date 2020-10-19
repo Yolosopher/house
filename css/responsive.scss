@@ -1432,6 +1432,9 @@
         justify-content: space-between;
         align-items: center;
     }
+    .addres-lang .lang {
+        margin-right: 31px
+    }
     .logo-cat{
         width: 80px;
         height: 40px;
@@ -1461,10 +1464,13 @@
     .header-addres{
         margin-right: 70px;
         flex-direction: column;
+        align-items: unset;
     }
     .addres-lang{
         align-items: flex-start;
         margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
     }
     .header-addres a:first-child{
         margin-right: 0;

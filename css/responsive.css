@@ -1344,6 +1344,9 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .addres-lang .lang {
+    margin-right: 31px;
+  }
   .logo-cat {
     width: 80px;
     height: 40px;
@@ -1377,12 +1380,19 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
   }
   .addres-lang {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
     margin-left: 0;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .header-addres a:first-child {
     margin-right: 0;

@@ -206,10 +206,10 @@ $(document).ready(function () {
 			$(".cat-down").children(".inner-cat.active").removeClass("active");
 			$(".cat-down").addClass("downn");
 			$(this).removeClass("downn");
-			$(this).children(".inner-cat").slideDown("fast");
+			$(this).children(".inner-cat").slideDown("slow");
 			$(this).children(".inner-cat").addClass("active");
 		} else {
-			$(this).children(".inner-cat").slideUp("fast");
+			$(this).children(".inner-cat").slideUp("slow");
 			$(this).children(".inner-cat").removeClass("active");
 			$(this).addClass("downn");
 		}
