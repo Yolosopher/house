@@ -1026,7 +1026,7 @@ p,span{
     justify-content: space-between;
     img{
         margin-top: 23px;
-        max-width: 302px;
+        max-width: 460px;
         max-height: 304px;
         object-fit: contain;
     }
@@ -1238,9 +1238,11 @@ p,span{
             transition: background-color .3s;
         }
     }
-    &:hover{
-        .spiner-img-a::after{
-            background-color: hsla(0, 0%, 7%, 0.8);
+    @media screen and (min-width: 600px) {
+        &:hover{
+            .spiner-img-a::after{
+                background-color: hsla(0, 0%, 7%, 0.8);
+            }
         }
     }
 }
