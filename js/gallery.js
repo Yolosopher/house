@@ -28,8 +28,7 @@ $(document).ready(function () {
     }
 
     var catmedia1 = window.matchMedia("(max-width: 800px)");
-
-    if (catmedia1.matches) {
+    if (true) { //edited from if(catmedia1.matches)
         $(".video-block div").on("click", function () {
             const empty = "";
             const imgSrc = $(this).children().attr("data");
@@ -76,7 +75,7 @@ $(document).ready(function () {
     }
 
     var catmedia = window.matchMedia("(max-width: 800px)");
-    if (catmedia.matches) {
+    if (true) { //edited from if(catmedia.matches)
         $(".photo-block > img").on("click", function () {
             const imgSrc = $(this).attr("src");
             $(this).toggleClass("active");

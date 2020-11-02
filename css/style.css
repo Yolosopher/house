@@ -3670,10 +3670,6 @@ p, span {
   opacity: 1;
 }
 
-.drop-img.rop-resp {
-  display: none;
-}
-
 .video-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3740,15 +3736,13 @@ p, span {
   opacity: 1;
 }
 
-.video-block div:first-child {
+.video-block div:nth-child(odd) {
   margin-left: 0;
 }
 
 .video-block div .no-play {
-  width: 234px;
+  width: 100%;
   height: 170px;
-  -o-object-fit: cover;
-     object-fit: cover;
   cursor: pointer;
 }
 
@@ -3779,10 +3773,6 @@ p, span {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.drop-video.rop-resp {
-  display: none;
 }
 
 .blog-list {
