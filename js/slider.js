@@ -50,7 +50,7 @@ $(document).ready(function() {
     }
   });
 
-  var ind
+  var ind;
 
   $('.product-in-slider .swiper-slide').on('click', function() {
     console.log($(this).index());
