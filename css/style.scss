@@ -474,10 +474,46 @@ p,span{
 
     .burger{
         display: none;
+    }
+    .x-color{
+        display: block;
+        height: 14px;
+        position: relative;
         width: 14px;
         cursor: pointer;
+        background-color: #dfdbdb;
+        outline: none;
+        span{
+            width: 13px;
+            height: 1px;
+            background-color:#AD8450;
+            display: block;
+            position: absolute;
+            border: none;
+            border-radius: 15px;
+            &:nth-child(2){
+                display: none;
+            }
+             &:nth-child(1){
+                transform: rotate(45deg);
+            }
+            &:nth-child(3){
+                transform: rotate(-45deg);
+            }
+        }
+        &.active{
+            background-color: #DBAB5E;
+            box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.25);
+            &::before {
+                content: none !important;
+            }
+            span{
+                width: 13px;
+                height: 1px;
+                background-color: #dfdbdb;
+            }
+        }
     }
-
     .logo-cat{
         display: flex;
     }
@@ -2798,7 +2834,8 @@ transition: 0s;
             height: 25px;
             @include flex();
             margin-right: 10px;
-            &.active{
+            transition: box-shadow .2s ease-in-out;
+            &.active{                
                 &:before{
                     width: 9px;
                     height: 9px;

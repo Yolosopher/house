@@ -506,8 +506,56 @@ p, span {
 
 .burger {
   display: none;
+}
+
+.x-color {
+  display: block;
+  height: 14px;
+  position: relative;
   width: 14px;
   cursor: pointer;
+  background-color: #dfdbdb;
+  outline: none;
+}
+
+.x-color span {
+  width: 13px;
+  height: 1px;
+  background-color: #AD8450;
+  display: block;
+  position: absolute;
+  border: none;
+  border-radius: 15px;
+}
+
+.x-color span:nth-child(2) {
+  display: none;
+}
+
+.x-color span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.x-color span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.x-color.active {
+  background-color: #DBAB5E;
+  -webkit-box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.x-color.active::before {
+  content: none !important;
+}
+
+.x-color.active span {
+  width: 13px;
+  height: 1px;
+  background-color: #dfdbdb;
 }
 
 .logo-cat {
@@ -3359,6 +3407,10 @@ p, span {
       -ms-flex-pack: center;
           justify-content: center;
   margin-right: 10px;
+  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  transition: -webkit-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
 }
 
 .color-change-box button.active:before {

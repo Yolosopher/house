@@ -196,6 +196,8 @@
         display: block;
         height: 14px;
         position: absolute;
+        width: 14px;
+        cursor: pointer;
         &.active{
             span{
                 &:nth-child(2){
@@ -227,7 +229,9 @@
             }
         }
     }
+    .x-color {
 
+    }
     .header{
         height: 110px;
     }
