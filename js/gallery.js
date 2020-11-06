@@ -54,56 +54,116 @@ $(document).ready(function () {
     // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
     // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    function photoRemove() {
-        $(".photo-block > img").addClass("noactive");
-        $(".photo-block > img").removeClass("active");
-        $(".photo-block > .drop-img").removeClass("active");
-    }
+    // function photoRemove() {
+    //     $(".photo-block > img").addClass("noactive");
+    //     $(".photo-block > img").removeClass("active");
+    //     $(".photo-block > .drop-img").removeClass("active");
+    // }
     var objres = ".drop-img.rop-resp";
     var objdes = ".drop-img.rop-des";
     var objJust = ".drop-img";
 
-    function photoClickIf(obj, classN) {
-        if ($(obj).parent().find("img").hasClass("active")) {
-            photoRemove();
-            $(obj).addClass("active");
-            $(obj).parent().find(classN).addClass("active");
-        } else {
-            $(obj).parent().find(".drop-img").removeClass("active");
-            $(".photo-block > img").removeClass("noactive");
-        }
-    }
+    // function photoClickIf(obj, classN) {
+    //     if ($(obj).parent().find("img").hasClass("active")) {
+    //         photoRemove();
+    //         $(obj).addClass("active");
+    //         $(obj).parent().find(classN).addClass("active");
+    //     } else {
+    //         $(obj).parent().find(".drop-img").removeClass("active");
+    //         $(".photo-block > img").removeClass("noactive");
+    //     }
+    // }
 
     var catmedia = window.matchMedia("(max-width: 800px)");
-    if (true) { //edited from if(catmedia.matches)
-        $(".photo-block > img").on("click", function () {
-            const imgSrc = $(this).attr("src");
-            $(this).toggleClass("active");
-            const obj = $(this);
-            if ($(this).is(":nth-child(1)") || $(this).is(":nth-child(2)")) {
-                photoClickIf(obj, objres);
-                $(this)
-                    .parent()
-                    .find(".drop-img")
-                    .children()
-                    .attr("src", imgSrc);
-            } else {
-                photoClickIf(obj, objdes);
-                $(this)
-                    .parent()
-                    .find(".drop-img.rop-des")
-                    .children()
-                    .attr("src", imgSrc);
-            }
-        });
-    } else {
-        $(".photo-block > img").on("click", function () {
-            const imgSrc = $(this).attr("src");
-            const obj = $(this);
-            $(this).toggleClass("active");
-            photoClickIf(obj, objJust);
-            $(this).parent().find(".drop-img").children().attr("src", imgSrc);
-        });
-    }
+    // if (true) { //edited from if(catmedia.matches)
+    //     $(".photo-block > img").on("click", function () {
+    //         const imgSrc = $(this).attr("src");
+    //         $(this).toggleClass("active");
+    //         const obj = $(this);
+    //         if ($(this).is(":nth-child(1)") || $(this).is(":nth-child(2)")) {
+    //             photoClickIf(obj, objres);
+    //             $(this)
+    //                 .parent()
+    //                 .find(".drop-img")
+    //                 .children()
+    //                 .attr("src", imgSrc);
+    //         } else {
+    //             photoClickIf(obj, objdes);
+    //             $(this)
+    //                 .parent()
+    //                 .find(".drop-img.rop-des")
+    //                 .children()
+    //                 .attr("src", imgSrc);
+    //         }
+    //     });
+    // } else {
+    //     $(".photo-block > img").on("click", function () {
+    //         const imgSrc = $(this).attr("src");
+    //         const obj = $(this);
+    //         $(this).toggleClass("active");
+    //         photoClickIf(obj, objJust);
+    //         $(this).parent().find(".drop-img").children().attr("src", imgSrc);
+    //     });
+    // }
     // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+    // new by nika
+    $(".photo-block > img").on("click", function () {
+        $('.prod-pop').addClass('active');
+        var productIn = new Swiper('.product-in-slider', {
+            mousewheel: true,
+            slidesPerView:'auto',
+            scrollbar: {
+              el: '.swiper-scrollbar',
+              hide: true,
+            },
+            breakpoints: {
+              801: {
+                direction: 'vertical',
+                  spaceBetween: 26,
+                  },
+              320: {
+              direction: 'horizontal',
+                spaceBetween: 15,
+                },
+              },
+          });
+        
+        
+          var gThu = new Swiper('.g-thumb', {
+            mousewheel: true,
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            spaceBetween: 12,
+            breakpoints: {
+              1101: {
+              direction: 'vertical',
+              },
+              320: {
+                direction: 'horizontal',
+              },
+            },
+            navigation: {
+                nextEl: '.pro-n',
+                prevEl: '.pro-p',
+              },
+          });
+          var gTop = new Swiper('.g-topp', {
+            spaceBetween: 10,
+            slidesPerView: 1,
+            pagination: {
+              el: '.swiper-pagination',
+              type: 'fraction',
+            },
+            thumbs: {
+              swiper: gThu
+            },
+            
+          });
+        
+    });
+    $('.xxxx, .bckk').on('click', function() {
+        $('.prod-pop').removeClass('active')
+    });
+
 });
