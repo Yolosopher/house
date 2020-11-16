@@ -108,7 +108,7 @@ $(document).ready(function () {
     // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
     // new by nika
-    $(".photo-block > img").on("click", function () {
+    $(".photo-block img").on("click", function () {
         $('.prod-pop').addClass('active');
         var productIn = new Swiper('.product-in-slider', {
             mousewheel: true,

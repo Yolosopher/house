@@ -2,23 +2,37 @@ $(document).ready(function() {
 
   var productIn = new Swiper('.product-in-slider', {
     mousewheel: true,
-    slidesPerView:'auto',
     scrollbar: {
       el: '.swiper-scrollbar',
       hide: true,
     },
     breakpoints: {
       801: {
-        direction: 'vertical',
-          spaceBetween: 26,
-          },
+        direction: 'horizontal',
+        spaceBetween: 20,
+        slidesPerView: 4,
+      },
       320: {
       direction: 'horizontal',
         spaceBetween: 15,
+        slidesPerView: 'auto',
         },
       },
   });
-
+  var mainImage = new Swiper('.product-in-main-img-slider', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    thumbs: {
+      swiper: productIn
+    },
+    navigation: {
+      nextEl: '.pro-n-new',
+      prevEl: '.pro-p-new',
+  },
+  });
 
   var gThu = new Swiper('.g-thumb', {
     mousewheel: true,
@@ -36,7 +50,7 @@ $(document).ready(function() {
     navigation: {
         nextEl: '.pro-n',
         prevEl: '.pro-p',
-      },
+    },
   });
   var gTop = new Swiper('.g-topp', {
     spaceBetween: 10,
@@ -51,17 +65,21 @@ $(document).ready(function() {
   });
 
   var ind;
-
   $('.product-in-slider .swiper-slide').on('click', function() {
     // console.log($(this).index());
     ind = $(this).index()
-
+    
     if($(this).hasClass('swiper-slide-active')){
-      $('.prod-pop').addClass('active')
       gThu.slideTo(ind)
       gTop.slideTo(ind)
     }
-    productIn.slideTo(ind)
+    // productIn.slideTo(ind);
+    $('.swiper-slide-active').removeClass('swiper-slide-active');
+    $(this).addClass('swiper-slide-active');
+  });
+  // added by yolo
+  $('.product-in-main-img-slider img').on('click', function() {
+    $('.prod-pop').addClass('active')
   });
 
   $('.xxxx, .bckk').on('click', function() {

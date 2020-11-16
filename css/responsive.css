@@ -310,6 +310,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .product-in-main-img-slider {
+    margin-top: 0 !important;
+  }
   .goToPrevPage {
     display: none;
   }
@@ -349,13 +352,6 @@
   .pro-info-header {
     margin-top: 0;
     margin-bottom: 30px;
-  }
-  .swiper-container.product-in-slider {
-    width: 200px;
-    min-width: 200px;
-  }
-  .swiper-container.product-in-slider .swiper-slide {
-    height: 200px;
   }
   .sulmodzebnili {
     display: none;
@@ -685,15 +681,13 @@
     height: auto;
   }
   .swiper-container.product-in-slider {
-    height: 130px;
     overflow: hidden;
-    margin-top: initial !important;
-    width: calc(100% + 20px);
+    margin-top: 10px !important;
+    width: 100%;
     margin-bottom: 14px;
   }
   .swiper-container.product-in-slider .swiper-slide {
-    height: 100%;
-    width: calc(100% - 20px);
+    width: calc(100% / 4);
   }
   .pro-info-header h1 {
     display: none;
