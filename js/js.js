@@ -3,7 +3,7 @@ $(document).ready(function () {
 		createBackBTN();
 	};
 	var swiperindex = new Swiper(".index-slider", {
-		direction: "vertical",
+		direction: "horizontal",
 		slidesPerView: 1,
 		autoplay: {
 			delay: 5000,
@@ -206,7 +206,7 @@ $(document).ready(function () {
 			$(".cat-down").children(".inner-cat.active").removeClass("active");
 			$(".cat-down").addClass("downn");
 			$(this).removeClass("downn");
-			$(this).children(".inner-cat").slideDown("slow");
+			$(this).children(".inner-cat").slideDown("slow").css('display', 'grid');
 			$(this).children(".inner-cat").addClass("active");
 		} else {
 			$(this).children(".inner-cat").slideUp("slow");
