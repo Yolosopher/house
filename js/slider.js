@@ -17,7 +17,11 @@ $(document).ready(function() {
         spaceBetween: 15,
         slidesPerView: 'auto',
         },
-      },
+    },
+    navigation: {
+      prevEl: '.product-in-slider-prev',
+      nextEl: '.product-in-slider-next',
+    }
   });
   var mainImage = new Swiper('.product-in-main-img-slider', {
     slidesPerView: 1,
@@ -77,7 +81,7 @@ $(document).ready(function() {
     $('.swiper-slide-active').removeClass('swiper-slide-active');
     $(this).addClass('swiper-slide-active');
   });
-  // added by yolo
+  // added by me
   $('.product-in-main-img-slider img').on('click', function() {
     $('.prod-pop').addClass('active')
   });

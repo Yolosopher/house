@@ -3491,7 +3491,8 @@ a.non-auth-in-basket.profile-link {
 
 // added by nika
 .raw-slider-combiner {
-    height: auto
+    height: auto;
+    position: relative;
 }
 
 .product-in-main-img-slider {
@@ -3503,4 +3504,26 @@ a.non-auth-in-basket.profile-link {
         height: 100%;
         object-fit: cover;
     }
+}
+
+.product-in-slider-prev {
+    width: 44px;
+    height: 44px;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 47px;
+    left: 0;
+    cursor: pointer;
+    &[aria-disabled="true"] {
+        opacity: .3;
+    }
+}
+.product-in-slider-next {
+    @extend .product-in-slider-prev;
+    left: unset;
+    right: 0;
 }
