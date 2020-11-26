@@ -7,7 +7,7 @@ $(document).ready(function () {
 		slidesPerView: 1,
 		autoplay: {
 			delay: 5000,
-			disableOnInteraction: false,
+			disableOnInteraction: true,
 		},
 		loop: true,
 		pagination: {

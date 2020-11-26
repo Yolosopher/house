@@ -121,9 +121,6 @@
   .index-block2 div {
     width: calc((100% - 100px)/ 3);
   }
-  .is-h2-text h2 {
-    font-size: 16px;
-  }
   .is-line {
     height: 40px;
   }
@@ -131,16 +128,13 @@
     height: 20px;
     margin-top: 20px;
   }
-  .is-price p {
-    font-size: 16px;
-    margin-top: 0;
-    line-height: 21px;
+  .is-price {
+    margin-left: 18px;
   }
-  .is-price p span {
-    font-size: 9px;
+  .is-price p {
+    margin-top: 0;
   }
   .is-price span {
-    font-size: 12px;
     margin-top: 4px;
   }
   .is-text p {
@@ -632,6 +626,21 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .is-price {
+    margin-left: 18px;
+  }
+  .is-price p {
+    font-size: 16px;
+    margin-top: 0;
+    line-height: 21px;
+  }
+  .is-price p span {
+    font-size: 9px;
+  }
+  .is-price span {
+    font-size: 12px;
+    margin-top: 4px;
+  }
   .blogin > p,
   .blogin > span,
   .shear-date,
@@ -640,13 +649,16 @@
     padding: 0 20px;
     max-width: 100%;
   }
+  .is-price {
+    margin-bottom: 5px;
+  }
   .is-h2-text {
     width: 350px;
-    height: 150px;
+    height: 200px;
     padding: 30px;
   }
   .is-h2-text h2 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .shear-date {
     margin-bottom: 30px;
@@ -860,8 +872,12 @@
   .index-slider {
     height: 254px;
   }
+  .index-slider .swiper-pagination {
+    display: none !important;
+  }
   .see-product {
     font-size: 9px;
+    margin: 0;
     width: 135px;
     height: 34px;
   }
@@ -1259,9 +1275,8 @@
     line-height: 22px;
   }
   .is-h2-text {
-    width: calc(100% - 60px);
+    width: calc(100% - 15px);
     height: 135px;
-    background-color: rgba(255, 255, 255, 0.6);
   }
   .is-h2-text h2 {
     line-height: 22px;
@@ -1493,7 +1508,7 @@
   .see-product {
     -webkit-transform: none;
             transform: none;
-    top: 30px;
+    top: 12.5px;
     left: 30px;
   }
   .profile-recovery button,

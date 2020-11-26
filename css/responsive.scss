@@ -149,9 +149,6 @@
     }
 
 
-    .is-h2-text h2 {
-        font-size: 16px;
-    }
 
     .is-line{
         height: 40px;
@@ -161,16 +158,17 @@
         }
     }
     .is-price{
+        margin-left: 18px;
         p{
-            font-size: 16px;
+            // font-size: 16px;
             margin-top: 0;
-            line-height: 21px;
+            // line-height: 21px;
             span{
-                font-size: 9px;
+                // font-size: 9px;
             }
         }
         span{
-            font-size: 12px;
+            // font-size: 12px;
             margin-top: 4px;
         }
     }
@@ -696,6 +694,21 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .is-price{
+        margin-left: 18px;
+        p{
+            font-size: 16px;
+            margin-top: 0;
+            line-height: 21px;
+            span{
+                font-size: 9px;
+            }
+        }
+        span{
+            font-size: 12px;
+            margin-top: 4px;
+        }
+    }
     .blogin > p,
     .blogin > span,
     .shear-date,
@@ -704,12 +717,16 @@
         padding: 0 20px;
         max-width: 100%;
     }
+    .is-price {
+        margin-bottom: 5px;
+    }
+    
     .is-h2-text {
         width: 350px;
-        height: 150px;
+        height: 200px;
         padding: 30px;
         h2 {
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
     }
     .shear-date{
@@ -925,9 +942,13 @@
 
     .index-slider{
         height: 254px;
+        .swiper-pagination {
+            display: none !important;
+        }
     }
     .see-product{
         font-size: 9px;
+        margin: 0;
         width: 135px;
         height: 34px;
     }
@@ -1347,9 +1368,8 @@
 
     
     .is-h2-text {
-        width: calc(100% - 60px);
+        width: calc(100% - 15px);
         height: 135px;
-        background-color: rgba($color: #fff, $alpha: .6);
         h2 {
             line-height: 22px;
             font-size: 13px;
@@ -1575,7 +1595,7 @@
     }
     .see-product {
         transform: none;
-        top: 30px;
+        top: 12.5px;
         left: 30px;
     }
 

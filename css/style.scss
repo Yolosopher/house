@@ -394,7 +394,6 @@ p,span{
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        height: 255px;
         z-index: 222;
         position: relative;
     }
@@ -525,10 +524,6 @@ p,span{
         display: flex;
         align-items: center;
         position: relative;
-        background: #AD8450;
-        padding-left: 10px;
-        margin-right: 20px;
-        flex: 1;
         .cat-down {
             color: white;
             font-size: 13px;
@@ -537,17 +532,14 @@ p,span{
             cursor: pointer;
             align-items: center;
             font-weight: 900;
-            color: #111111;
-            height: 100%;
-            padding: 0 10px;
 
             &:not(:last-child) {
-                margin-right: 10px;
+                margin-right: 31px;
             }
 
             &:hover,
             &:active {
-                background: #DBAB5E
+                color: #b39566
             }
 
             i {
@@ -576,6 +568,10 @@ p,span{
             a{
                 opacity: 1;
                 transition: ease-in-out 0.5s;
+                &:hover, &.active {
+                    font-family: bold;
+                    color: #AD8450
+                }
             }
         }
 
@@ -1002,23 +998,23 @@ p,span{
 
     .swiper-pagination{
         display: flex;
-        flex-direction: column;
-        width: 4px!important;
-        right: 37px!important;
+        width: 100%!important;
         // bottom: initial!important/;
         left: initial!important;
         justify-content: center;
-        height: 100%;
-
+        height: 4px;
+        bottom: 160px !important;
         .swiper-pagination-bullet{
-            margin: 5px 0!important;
-            height: 13px!important;
-            width: 4px!important;
+            height: 4px!important;
+            width: 13px!important;
             border-radius: initial;
-            background-color: #AD8450;
+            background-color: #fff;
+            &:not(:first-child), &:not(:last-child) {
+                margin: 0 5px!important;
+            }
 
             &.swiper-pagination-bullet-active{
-                height: 26px!important;
+                width: 26px!important;
             }
         }
     }
@@ -1072,7 +1068,7 @@ p,span{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     img{
         width: 100%;
@@ -1084,35 +1080,35 @@ p,span{
 }
 
 .is-h2-text{
-    align-self: flex-end;
-    margin-bottom: 30px;
-    margin-left: 30px;
-    background-color: white;
-    padding: 40px;
-    
-    padding-right: 68px;
+    align-self: center;
+    background-color: rgba($color: #111111, $alpha: .4);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // padding-right: 68px;
     box-sizing: border-box !important;
     width: 494px;
-    height: 200px;
+    height: 266px;
     
     h2{
         font-family: bold;
         font-size: 24px;
-        margin-bottom: 30px;
-        color:#111111;
+        margin-bottom: 25px;
+        color:#fff;
     }
 }
 
 .is-price-text{
-    display: flex;
     position: relative;
 }
 
 .is-line{
     height: 65px;
-    background-color:#111111;
+    background-color:#fff;
     min-width: 2px;
-
+    display: none;
     div{
         background-color: #AD8450;
         height: 27px;
@@ -1122,26 +1118,29 @@ p,span{
 }
 
 .is-price{
-    margin-left: 18px;
-
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 25px;
     p{
-    color: #AD8450;
+    color: #fff;
     font-family: bold;
     font-size:32px;
     line-height: 32px;
     margin-top: 3px;
         span{
             font-family: bold;
-            color: #AD8450;
+            color: #fff;
             font-size: 14px;
         }
     }
 
-    span{
-        font-size: 18px;
-        color: #111111;
+    > span{
+        font-size: 13px;
+        line-height: 32px;
+        color: #fff;
         font-family: reg;
         margin-top: 6px;
+        margin-left: 10px;
     }
 }
 
@@ -1163,10 +1162,9 @@ p,span{
     font-size: 13px;
     font-family: bold;
     @include flex();
-    position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    margin: 0 auto;
     &:hover{
         background-color: #111111;
         color: #AD8450;
