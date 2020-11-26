@@ -6,8 +6,8 @@ $(document).ready(function () {
 		direction: "horizontal",
 		slidesPerView: 1,
 		autoplay: {
-			delay: 5000,
-			disableOnInteraction: true,
+			delay: 3000,
+			disableOnInteraction: false,
 		},
 		loop: true,
 		pagination: {
@@ -155,12 +155,20 @@ $(document).ready(function () {
 	});
 
 	$(".filter-ul li").on("click", function () {
-		$(".filter-ul li .drop-filter:visible").slideToggle("fast");
-		$(".filter-ul li .drop-filter:visible").css("display", "flex");
-		$(".filter-ul li .drop-filter:visible").toggleClass("active");
-		$(this).children(".drop-filter").slideToggle("fast");
-		$(this).children(".drop-filter").css("display", "flex");
-		$(this).children(".drop-filter").toggleClass("active");
+		if ($(this).hasClass('active')) {
+			$(this).toggleClass('active');
+			$(".filter-ul li .drop-filter:visible").slideToggle("fast");
+			$(".filter-ul li .drop-filter:visible").removeClass("active");
+		} else {
+			$(".filter-ul li .drop-filter:visible").slideToggle("fast");
+			$(".filter-ul li .drop-filter:visible").css("display", "flex");
+			$(".filter-ul li .drop-filter:visible").toggleClass("active");
+			$(this).children(".drop-filter").slideToggle("fast");
+			$(this).children(".drop-filter").css("display", "flex");
+			$(this).children(".drop-filter").toggleClass("active");
+			$('.filter-ul li.active').toggleClass('active');
+			$(this).toggleClass('active');
+		}
 	});
 
 	// var catmedia = window.matchMedia("(max-width: 1024px)")
@@ -318,10 +326,10 @@ $(".product-in-slider img")
 
 // start init map
 function initMap() {
-  // The location of location
-  var location = { lat: lattt, lng: longgg };
+  	// The location of location
+	var location = { lat: 42.0196193, lng: 43.7213373 };
 	// options
-	var opts = {
+	const opts = {
 		zoom: 16,
 		zoomControl: true,
 		zoomControlOptions: {
@@ -338,13 +346,13 @@ function initMap() {
 		center: location,
 	};
 	// The map, centered at location
-  var map = new google.maps.Map(document.getElementById("map"), opts);
-  if (document.getElementById("map2")) {
-    var map2 = new google.maps.Map(document.getElementById("map2"), opts);
-    var marker2 = new google.maps.Marker({ position: location, map: map2 });
-  }
+  	var map2 = new google.maps.Map(document.getElementById("map2"), opts);
+	// if (document.getElementById("map2")) {
+	// var map2 = new google.maps.Map(document.getElementById("map2"), opts);
+	// var marker2 = new google.maps.Marker({ position: location, map: map2 });
+	// }
 	// The marker, positioned at location
-	var marker = new google.maps.Marker({ position: location, map: map });
+	var marker = new google.maps.Marker({ position: location, map: map2 });
 
 }
 // end init map

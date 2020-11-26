@@ -91,9 +91,11 @@ $(document).ready(function() {
   });
   
 $('.color-change-box button').on('click', function() {
-  productIn.slideTo(0)
+  productIn.slideTo(0);
+  mainImage.slideTo(0);
   $('.color-change-box button').removeClass('active')
   $(this).addClass('active')
+  $('.swiper-container.product-in-main-img-slider .swiper-slide:nth-child(1) img').attr('src', $(this).attr('url'))
   $('.swiper-container.product-in-slider .swiper-slide:nth-child(1) img').attr('src', $(this).attr('url'))
   $('.swiper-container.g-thumb .swiper-slide:nth-child(1) img').attr('src', $(this).attr('url'))
   $('.swiper-container.g-topp .swiper-slide:nth-child(1) img').attr('src', $(this).attr('url'))

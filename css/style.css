@@ -595,7 +595,7 @@ p, span {
   margin-right: 31px;
 }
 
-.header-category .cat-down:hover, .header-category .cat-down:active {
+.header-category .cat-down:hover, .header-category .cat-down:active, .header-category .cat-down.active {
   color: #b39566;
 }
 
@@ -633,7 +633,6 @@ p, span {
 }
 
 .inner-cat.active a:hover, .inner-cat.active a.active {
-  font-family: bold;
   color: #AD8450;
 }
 
@@ -813,6 +812,7 @@ p, span {
   display: flex;
   gap: 10px;
   position: relative;
+  z-index: -1;
 }
 
 .cart.active .cart-counter {
@@ -1190,6 +1190,7 @@ p, span {
   margin: 0 auto;
   -webkit-box-shadow: 0 10px 30px rgba(114, 123, 194, 0.1);
           box-shadow: 0 10px 30px rgba(114, 123, 194, 0.1);
+  max-height: calc(100vh - 204px);
 }
 
 .index-slider .swiper-slide {
@@ -1206,7 +1207,13 @@ p, span {
       -ms-flex-pack: center;
           justify-content: center;
   height: 4px;
-  bottom: 160px !important;
+  bottom: calc((100vh - 194px) / 2 - 110px) !important;
+}
+
+@media screen and (min-height: 734px) {
+  .index-slider .swiper-pagination {
+    bottom: 160px !important;
+  }
 }
 
 .index-slider .swiper-pagination .swiper-pagination-bullet {
@@ -3190,6 +3197,8 @@ p, span {
   background-color: #DBAB5E;
   position: absolute;
   left: -26px;
+  -webkit-transform: translateY(-4.5px);
+          transform: translateY(-4.5px);
 }
 
 .drop-filter {
@@ -3615,8 +3624,8 @@ p, span {
 .swiper-container.g-thumb .swiper-slide img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .swiper-container.g-topp {
@@ -4192,10 +4201,11 @@ a.non-auth-in-basket.profile-link {
 }
 
 .product-in-main-img-slider img {
-  word-wrap: 100%;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
 }
 
 .product-in-slider-prev, .product-in-slider-next {
@@ -4225,5 +4235,11 @@ a.non-auth-in-basket.profile-link {
 .product-in-slider-next {
   left: unset;
   right: 0;
+}
+
+.g-thumb .swiper-wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
