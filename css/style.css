@@ -668,6 +668,7 @@ p, span {
 
 .search.active form {
   width: 755px;
+  z-index: 1;
 }
 
 .search.active .srch-klik {
@@ -812,7 +813,6 @@ p, span {
   display: flex;
   gap: 10px;
   position: relative;
-  z-index: -1;
 }
 
 .cart.active .cart-counter {

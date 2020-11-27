@@ -605,6 +605,7 @@ p,span{
         &.active{
             form{
                 width:755px;
+                z-index: 1;
             }
             .srch-klik{
                 display: none;
@@ -699,7 +700,6 @@ p,span{
             display: flex;
             gap: 10px;
             position: relative;
-            z-index: -1;
             .cart-counter {
                 display: unset;
             }
