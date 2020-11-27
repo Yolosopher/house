@@ -5,10 +5,10 @@ $(document).ready(function () {
 	var swiperindex = new Swiper(".index-slider", {
 		direction: "horizontal",
 		slidesPerView: 1,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
 		loop: true,
 		pagination: {
 			el: ".swiper-pagination.swiper-pagination1",

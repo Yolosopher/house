@@ -1125,6 +1125,7 @@ p,span{
     display: flex;
     align-items: flex-end;
     margin-bottom: 25px;
+    justify-content: center;
     p{
     color: #fff;
     font-family: bold;
@@ -1174,8 +1175,20 @@ p,span{
         color: #AD8450;
     }
 }
-
-
+.goToPrevPage-analogue {
+    @extend .goToPrevPage;
+    transform: rotate(180deg) !important;
+    display: none !important;
+    position: static !important;
+}
+.see-product {
+    span {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        line-height: inherit;
+    }
+}
 .index-block2{
     height: 500px;
     width: 100%;

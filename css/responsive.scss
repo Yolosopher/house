@@ -921,7 +921,7 @@
 
     .index-block2{
         height: 420px;
-        margin-top: -60px;
+        margin-top: 0;
         margin-bottom: -60px;
         flex-direction: column;
 
@@ -1024,7 +1024,15 @@
     .color-change-box{
         margin-bottom: 10px;
     }
-
+    .index-slider {
+        width: 100% !important;
+        height: 287px;
+        padding-bottom: 33px !important;
+        background-color: rgba($color: #242424, $alpha: .6);
+        .is1, .is2, .is3 {
+            display: none;
+        }
+    }
     .order-down-item{
         padding: 10px 10px;
         flex-wrap: wrap;
@@ -1368,12 +1376,37 @@
 
     
     .is-h2-text {
-        width: calc(100% - 15px);
-        height: 135px;
+        width: calc(100% - 64px);
+        align-self: flex-end;
+        position: relative;
+        top: 33px;
+        background-color: #fff;
+        color: #111111;
+        padding-left: 20px;
+        align-items: flex-start;
+        height: 137px;
         h2 {
-            line-height: 22px;
-            font-size: 13px;
+            line-height: 19px;
+            font-size: 16px;
             margin-bottom: 10px;
+            color: inherit;
+        }
+        .is-price {
+            color: inherit;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-bottom: 0;
+            * {
+                color: inherit;
+            }
+            > p {
+                color: #AD8450;
+            }
+        }
+        .is-price span {
+            margin: 0;
+            line-height: 16px;
         }
     }
     .is3,
@@ -1576,6 +1609,32 @@
     .photo-block {
         img {
             height: 220px
+        }
+    }
+    .is-price-text {
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto auto 1fr;
+        .is-line {
+            display: block;
+            background-color: #111111;
+        }
+        .see-product {
+            justify-self: flex-end;
+            background: none !important;
+            display: inline;
+            width: unset;
+            height: unset;
+            span {
+                display: none !important;
+                font-family: inherit;
+                font-size: inherit;
+                color: inherit;
+                line-height: inherit;
+            }
+            .goToPrevPage-analogue {
+                display: flex !important;
+            }
         }
     }
 }

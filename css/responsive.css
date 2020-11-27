@@ -847,7 +847,7 @@
   }
   .index-block2 {
     height: 420px;
-    margin-top: -60px;
+    margin-top: 0;
     margin-bottom: -60px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -940,6 +940,15 @@
   }
   .color-change-box {
     margin-bottom: 10px;
+  }
+  .index-slider {
+    width: 100% !important;
+    height: 287px;
+    padding-bottom: 33px !important;
+    background-color: rgba(36, 36, 36, 0.6);
+  }
+  .index-slider .is1, .index-slider .is2, .index-slider .is3 {
+    display: none;
   }
   .order-down-item {
     padding: 10px 10px;
@@ -1275,13 +1284,48 @@
     line-height: 22px;
   }
   .is-h2-text {
-    width: calc(100% - 15px);
-    height: 135px;
+    width: calc(100% - 64px);
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    position: relative;
+    top: 33px;
+    background-color: #fff;
+    color: #111111;
+    padding-left: 20px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 137px;
   }
   .is-h2-text h2 {
-    line-height: 22px;
-    font-size: 13px;
+    line-height: 19px;
+    font-size: 16px;
     margin-bottom: 10px;
+    color: inherit;
+  }
+  .is-h2-text .is-price {
+    color: inherit;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0;
+  }
+  .is-h2-text .is-price * {
+    color: inherit;
+  }
+  .is-h2-text .is-price > p {
+    color: #AD8450;
+  }
+  .is-h2-text .is-price span {
+    margin: 0;
+    line-height: 16px;
   }
   .is3,
   .is1,
@@ -1492,6 +1536,36 @@
   }
   .photo-block img {
     height: 220px;
+  }
+  .is-price-text {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -ms-grid-columns: auto auto 1fr;
+        grid-template-columns: auto auto 1fr;
+  }
+  .is-price-text .is-line {
+    display: block;
+    background-color: #111111;
+  }
+  .is-price-text .see-product {
+    justify-self: flex-end;
+    background: none !important;
+    display: inline;
+    width: unset;
+    height: unset;
+  }
+  .is-price-text .see-product span {
+    display: none !important;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+  }
+  .is-price-text .see-product .goToPrevPage-analogue {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
 
