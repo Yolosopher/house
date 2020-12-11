@@ -5,10 +5,10 @@ $(document).ready(function () {
 	var swiperindex = new Swiper(".index-slider", {
 		direction: "horizontal",
 		slidesPerView: 1,
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		loop: true,
 		pagination: {
 			el: ".swiper-pagination.swiper-pagination1",
@@ -301,7 +301,7 @@ $(".clear").click(function () {
 //   });
 
 // last added
-$(".product-in-slider img")
+$(".product-in-main-img-slider img")
 	.on("mousemove", function (e) {
 		var p = $(this).offset();
 		var width = $(this).outerWidth();
@@ -316,7 +316,7 @@ $(".product-in-slider img")
 		coverImage.parent().addClass("active");
 
 		coverImage.attr("src", src);
-		coverImage.css("transform", `scale(2) translate(${-pl}px, ${-pt}px)`);
+		coverImage.css("transform", `scale(2.5) translate(${-pl}px, ${-pt}px)`);
 	})
 	.on("mouseleave", function () {
 		var coverImage = $(".hoverZoomMovableImg-img");
@@ -327,7 +327,7 @@ $(".product-in-slider img")
 // start init map
 function initMap() {
   	// The location of location
-	var location = { lat: 42.0196193, lng: 43.7213373 };
+	var location = { lat: lattt, lng: longgg };
 	// options
 	const opts = {
 		zoom: 16,

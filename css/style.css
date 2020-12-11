@@ -666,6 +666,15 @@ p, span {
   background-color: #2F281C;
 }
 
+@media screen and (min-width: 1025px) {
+  .search:not(.active):hover button {
+    background-color: #AD8450;
+  }
+  .search:not(.active):hover button svg path {
+    fill: #111111;
+  }
+}
+
 .search.active form {
   width: 755px;
   z-index: 1;
@@ -707,6 +716,7 @@ p, span {
 .search button {
   width: 47px;
   height: 100%;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -782,6 +792,18 @@ p, span {
   background-color: #2F281C;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .cart:hover {
+    background-color: #AD8450;
+  }
+  .cart:hover svg path, .cart:hover svg circle {
+    fill: #111111;
+  }
+  .cart:hover .cart-counter {
+    color: #111111;
+  }
 }
 
 .cart .cart-counter {
@@ -1188,8 +1210,6 @@ p, span {
   height: 540px;
   background-color: white;
   margin: 0 auto;
-  -webkit-box-shadow: 0 10px 30px rgba(114, 123, 194, 0.1);
-          box-shadow: 0 10px 30px rgba(114, 123, 194, 0.1);
   max-height: calc(100vh - 204px);
 }
 
@@ -1562,7 +1582,8 @@ p, span {
   height: 255px !important;
 }
 
-.product-item:hover .spiner-bck {
+.product-item .spiner-bck {
+  display: none;
   opacity: 1;
 }
 
@@ -1591,7 +1612,7 @@ p, span {
 .product-item .spiner-img-a::after {
   content: '';
   position: absolute;
-  display: block;
+  display: none;
   top: 0;
   right: 0;
   width: 100%;
@@ -1600,9 +1621,16 @@ p, span {
   transition: background-color .3s;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1025px) {
   .product-item:hover .spiner-img-a::after {
+    display: block;
     background-color: rgba(18, 18, 18, 0.8);
+  }
+  .product-item:hover .spiner-bck {
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -1640,6 +1668,7 @@ p, span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: none;
 }
 
 .spiner-bck > p {
@@ -1671,6 +1700,7 @@ p, span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  white-space: nowrap;
 }
 
 .price p {
@@ -1704,13 +1734,14 @@ p, span {
   cursor: pointer;
 }
 
-.product-cart:hover, .product-cart.active {
+.product-cart:hover, .product-cart.active, .product-cart.added {
   background-color: #AD8450;
 }
 
 .product-cart:hover > svg path,
 .product-cart:hover > svg circle, .product-cart.active > svg path,
-.product-cart.active > svg circle {
+.product-cart.active > svg circle, .product-cart.added > svg path,
+.product-cart.added > svg circle {
   fill: #111111;
 }
 
@@ -2386,6 +2417,7 @@ p, span {
   color: #111111;
   margin-top: 14px;
   line-height: 17px;
+  white-space: nowrap;
 }
 
 .line-div {
@@ -3422,11 +3454,26 @@ p, span {
   margin-left: 28px;
 }
 
-.product-info > p {
+.product-info > .textdiv {
   font-size: 13px;
   color: #111111;
   font-family: reg;
   line-height: 22px;
+}
+
+.product-info > .textdiv * {
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.product-info > .textdiv li {
+  list-style: initial;
+  list-style-position: inside;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 .pro-info-header {
@@ -3654,8 +3701,8 @@ p, span {
 .swiper-container.g-topp .swiper-slide img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .pro-n,
@@ -3879,6 +3926,9 @@ p, span {
 .video-block div .play {
   position: absolute;
   cursor: pointer;
+  top: 135px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .video-block .drop-video {
@@ -4258,5 +4308,15 @@ a.non-auth-in-basket.profile-link {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: unset;
+}
+
+.profile #sell {
+  display: none;
+}
+
+.textdiv ul li {
+  list-style: initial;
+  list-style-position: inside;
 }
 /*# sourceMappingURL=style.css.map */

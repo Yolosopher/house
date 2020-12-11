@@ -601,7 +601,19 @@ p,span{
         width: 47px;
         position: relative;
         background-color: #2F281C;
-        
+        @media screen and (min-width: 1025px) {
+            &:not(.active){
+                &:hover{
+                    button {
+                        background-color: #AD8450;
+                        svg path {
+                            fill: #111111;
+                        }
+                    }
+                }
+            }
+        }
+
         &.active{
             form{
                 width:755px;
@@ -638,6 +650,7 @@ p,span{
         button{
             width: 47px;
             height: 100%;
+            background-color: transparent;
             @include flex();
         }
 
@@ -675,8 +688,23 @@ p,span{
         width: 47px;
         height: 47px;
         @include flex();
-        background-color: #2F281C;margin-left: 20px;
+        background-color: #2F281C;
+        margin-left: 20px;
         margin-right: 20px;
+        @media screen and (min-width: 1025px) {
+            &:hover {
+                background-color: #AD8450;
+                svg {
+                    path, circle {
+                        fill: #111111;
+                    }
+                }
+                .cart-counter {
+                    color: #111111;
+                }
+            }
+        }
+
         .cart-counter {
             display: none;
             font-family: bold;
@@ -991,7 +1019,7 @@ p,span{
     height: 540px;
     background-color: white;
     margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(114, 123, 194, 0.1);
+    // box-shadow: 0 10px 30px rgba(114, 123, 194, 0.1);
     max-height: calc(100vh - 204px);
     .swiper-slide{
         padding: 0;
@@ -1279,12 +1307,11 @@ p,span{
 .product-item{
     width: 182px!important;
     height: 255px!important;
-    &:hover{
-        .spiner-bck{
-            opacity: 1;
-        }
-    }
 
+    .spiner-bck {
+        display: none;
+        opacity: 1;
+    }
     &>a{
         font-size: 14px;
         font-family: reg;
@@ -1307,19 +1334,25 @@ p,span{
         &::after {
             content: '';
             position: absolute;
-            display: block;
+            display: none;
             top: 0;
             right: 0;
             width: 100%;
             height: 100%;
             transition: background-color .3s;
         }
+
     }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 1025px) {
         &:hover{
             .spiner-img-a::after{
+                display: block;
                 background-color: hsla(0, 0%, 7%, 0.8);
             }
+            .spiner-bck{
+                opacity: 1;
+                display: flex;
+            }            
         }
     }
 }
@@ -1345,7 +1378,7 @@ p,span{
     // background-color: hsla(0, 0%, 7%, 0.8);
     @include flex();
     flex-direction: column;
-
+    display: none;
     &>p{
         font-size: 11px;
         color: white;
@@ -1364,6 +1397,7 @@ p,span{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    white-space: nowrap;
     p{
         font-size: 16px;
         font-family: bold;
@@ -1386,7 +1420,7 @@ p,span{
     @include flex();
     background-color: rgba(173, 133, 80, 0.15);
     cursor: pointer;
-    &:hover, &.active{
+    &:hover, &.active, &.added{
         background-color: #AD8450;
         &>svg{
             path,
@@ -1947,6 +1981,7 @@ p,span{
         color: #111111;
         margin-top: 14px;
         line-height: 17px;
+        white-space: nowrap;
     }
 }
 
@@ -2831,12 +2866,26 @@ transition: 0s;
         justify-content: flex-start;
         margin-left: 28px;
 
-        &>p {
+        &>.textdiv {
             font-size: 13px;
             color: #111111;
             font-family: reg;
             line-height: 22px;
+            * {
+                font-size: inherit;
+                color: inherit;
+                font-family: inherit;
+                line-height: inherit;
+            }
+            li {
+                list-style: initial;
+                list-style-position: inside;
+                font-size: inherit;
+                font-family: inherit;
+                font-weight: inherit;
+            }
         }
+
     }
 
     .pro-info-header{
@@ -3012,7 +3061,7 @@ transition: 0s;
             img{
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             }
         }
     }
@@ -3211,7 +3260,9 @@ transition: 0s;
 
             .play{
                 position: absolute;
-                cursor: pointer;
+                cursor: pointer;                            
+                top: 135px;
+                transform: translateY(-50%);
             }
         }
        
@@ -3547,4 +3598,15 @@ a.non-auth-in-basket.profile-link {
 
 .g-thumb .swiper-wrapper {
     justify-content: center;
+    height: unset;
+}
+
+.profile #sell {
+    display: none;
+}
+
+
+.textdiv ul li{
+    list-style: initial;
+    list-style-position: inside;
 }
